@@ -1,0 +1,2185 @@
+{
+  "scope": "Archived measurements only; no new GPU tests in this update",
+  "model": "Qwen3.8-Flash-Next GSQ-RCO IQ3_XXS",
+  "current_date": "2026-11-01",
+  "current_power_caps_w": [
+    303,
+    231
+  ],
+  "current_prompt_tokens": 130020,
+  "current_max_context_per_request": 131072,
+  "current_output_tokens_per_request": 512,
+  "current_solo_clients": [
+    0
+  ],
+  "current_dual_clients": [
+    0,
+    1
+  ],
+  "current": {
+    "production": {
+      "source": "../../results/production-control.json",
+      "source_sha256": "674d031830f6caefd044e1717eca12459a3ccec4ff7b57c8fab1b838b465ce8a",
+      "summary": {
+        "solo_mean_e2e_tps": 122.67548753209618,
+        "dual_aggregate_e2e_tps": 156.42885839742638,
+        "dual_wall_s": 32.730533563008066,
+        "dual_batches": 5
+      },
+      "single_repeats": 3,
+      "single_e2e_tps_samples": [
+        115.91756840959364,
+        125.24772566031672,
+        126.86116852637821
+      ],
+      "single_ttft_s_mean": 0.43311700734193437,
+      "single_batch_wall_s_mean": 4.180246131009578,
+      "dual_route_e2e_tps_mean": [
+        79.05766657539469,
+        79.84229870162355
+      ],
+      "dual_route_ttft_s_mean": [
+        1.2070716236019507,
+        0.5696286962018349
+      ],
+      "dual_batch_wall_s_mean": 6.5458533524069935,
+      "aggregate_gain_percent": 27.51435640840567,
+      "all_output_marker_checks_passed": true
+    },
+    "rebuilt": {
+      "source": "../../results/clean-source-benchmark.json",
+      "source_sha256": "de1699d483868be13f4a276105f13bff564a20ed42104773b5c5e7f5ce765831",
+      "summary": {
+        "solo_mean_e2e_tps": 113.29355589007663,
+        "dual_aggregate_e2e_tps": 158.09487512908103,
+        "dual_wall_s": 123.0653427830257,
+        "dual_batches": 19
+      },
+      "single_repeats": 3,
+      "single_e2e_tps_samples": [
+        104.07552835423512,
+        116.5711219131197,
+        119.23401740287507
+      ],
+      "single_ttft_s_mean": 0.7208984436680718,
+      "single_batch_wall_s_mean": 4.535249731328804,
+      "dual_route_e2e_tps_mean": [
+        80.73417424830673,
+        80.0638370186632
+      ],
+      "dual_route_ttft_s_mean": [
+        0.8413793809978463,
+        0.8824107960497617
+      ],
+      "dual_batch_wall_s_mean": 6.476767022370998,
+      "aggregate_gain_percent": 39.54445501072716,
+      "all_output_marker_checks_passed": true
+    }
+  },
+  "historical_independent_replicas": {
+    "date": "2026-10-30",
+    "model": "Qwen3.8-Flash-Next GSQ-RCO IQ3_XXS",
+    "architecture": "2 single-GPU engines, solo MTP, shared host expert arena",
+    "power_caps_w": [
+      303,
+      257
+    ],
+    "host_memory_gib": 61.51,
+    "gpu_max_hw_queues": 6,
+    "arena_pin_gib_per_engine": 12,
+    "conversation_cache_mib_per_engine": 4096,
+    "request_context_limit": 131072,
+    "actual_prompt_tokens": 130041,
+    "soak_batch_count": 23,
+    "soak_batch_tps_median": 132.87063977963166,
+    "soak_sum_batch_wall_s": 179.95521664619446,
+    "tokens_divided_by_sum_batch_wall_tps": 130.87700617373605,
+    "whole_run_wall_tps": null,
+    "note": "Sum of batch durations excludes inter-batch controller gaps. This is not the current benchmark whole-run wall metric.",
+    "route_e2e_tps_medians": [
+      86.96212974790603,
+      66.48848643146243
+    ],
+    "cold_mean_ttft_s": 58.521944642066956,
+    "minimum_available_gib": 4.2651519775390625,
+    "batches": [
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r0.json",
+        "original_file_sha256": "bac98982ac5440eacf6f2f0bf61088989dee55ad0a0beb8732c5ae752f850ece",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 0,
+          "wall_s": 7.578712224960327,
+          "total_tokens": 1024,
+          "aggregate_tps": 135.1153031813872,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.3437575101852417,
+          "per_client_tps": [
+            107.84120491406108,
+            71.52853625620088
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 4.800567626953125,
+          "hotspot_peak": {
+            "main": 81.0,
+            "secondary": 83.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 228.6,
+              "prompt_per_token_ms": 32.657,
+              "prompt_per_second": 30.6,
+              "predicted_n": 512,
+              "predicted_ms": 4763.6,
+              "predicted_per_token_ms": 9.304,
+              "predicted_per_second": 107.5,
+              "draft_n": 367,
+              "draft_n_accepted": 292
+            },
+            "wall_s": 5.037664652998501,
+            "ttft_s": 0.281005859375
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 359.8,
+              "prompt_per_token_ms": 51.4,
+              "prompt_per_second": 19.5,
+              "predicted_n": 512,
+              "predicted_ms": 7179.5,
+              "predicted_per_token_ms": 14.022,
+              "predicted_per_second": 71.3,
+              "draft_n": 369,
+              "draft_n_accepted": 260
+            },
+            "wall_s": 7.572550211996713,
+            "ttft_s": 0.4065091609954834
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r1.json",
+        "original_file_sha256": "70926deb4cc4b7815b3be25e7f482e6c2568045bd845014ab4bba5e2771f2e42",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 1,
+          "wall_s": 7.107768535614014,
+          "total_tokens": 1024,
+          "aggregate_tps": 144.06771898510345,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.17687857151031494,
+          "per_client_tps": [
+            99.93525207375953,
+            74.27487877192583
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.907329559326172,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 83.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 99.3,
+              "prompt_per_token_ms": 14.186,
+              "prompt_per_second": 70.5,
+              "predicted_n": 512,
+              "predicted_ms": 5138.8,
+              "predicted_per_token_ms": 10.037,
+              "predicted_per_second": 99.6,
+              "draft_n": 363,
+              "draft_n_accepted": 272
+            },
+            "wall_s": 5.2858001189961215,
+            "ttft_s": 0.15326690673828125
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 145.0,
+              "prompt_per_token_ms": 20.714,
+              "prompt_per_second": 48.3,
+              "predicted_n": 512,
+              "predicted_ms": 6911.4,
+              "predicted_per_token_ms": 13.499,
+              "predicted_per_second": 74.1,
+              "draft_n": 371,
+              "draft_n_accepted": 282
+            },
+            "wall_s": 7.101575476997823,
+            "ttft_s": 0.20049023628234863
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r2.json",
+        "original_file_sha256": "e94b549578c3331a2e42550b3fadd993d5a91b6bc921b18cda128f1f1583e121",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 2,
+          "wall_s": 8.665006399154663,
+          "total_tokens": 1024,
+          "aggregate_tps": 118.17648514372695,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.0448380708694458,
+          "per_client_tps": [
+            106.26161268898505,
+            72.79642354803758
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.253757476806641,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 83.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 419.0,
+              "prompt_per_token_ms": 59.857,
+              "prompt_per_second": 16.7,
+              "predicted_n": 512,
+              "predicted_ms": 4833.3,
+              "predicted_per_token_ms": 9.44,
+              "predicted_per_second": 105.9,
+              "draft_n": 360,
+              "draft_n_accepted": 294
+            },
+            "wall_s": 5.2995543319993885,
+            "ttft_s": 0.4723496437072754
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1542.3,
+              "prompt_per_token_ms": 220.329,
+              "prompt_per_second": 4.5,
+              "predicted_n": 512,
+              "predicted_ms": 7052.5,
+              "predicted_per_token_ms": 13.774,
+              "predicted_per_second": 72.6,
+              "draft_n": 363,
+              "draft_n_accepted": 256
+            },
+            "wall_s": 8.6590301920005,
+            "ttft_s": 1.6173264980316162
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r3.json",
+        "original_file_sha256": "2d338e1bbfd559af073bb6e8c9db9a44687d0246673a072d7857c5e2186ac38e",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 3,
+          "wall_s": 7.274304389953613,
+          "total_tokens": 1024,
+          "aggregate_tps": 140.76947363025178,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.6124931573867798,
+          "per_client_tps": [
+            106.7895098336607,
+            72.25460678356649
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.572212219238281,
+          "hotspot_peak": {
+            "main": 79.0,
+            "secondary": 84.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 996.4,
+              "prompt_per_token_ms": 142.343,
+              "prompt_per_second": 7.0,
+              "predicted_n": 512,
+              "predicted_ms": 4808.9,
+              "predicted_per_token_ms": 9.392,
+              "predicted_per_second": 106.5,
+              "draft_n": 354,
+              "draft_n_accepted": 293
+            },
+            "wall_s": 5.850796307000564,
+            "ttft_s": 1.050623893737793
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 130.0,
+              "prompt_per_token_ms": 18.571,
+              "prompt_per_second": 53.8,
+              "predicted_n": 512,
+              "predicted_ms": 7103.9,
+              "predicted_per_token_ms": 13.875,
+              "predicted_per_second": 72.1,
+              "draft_n": 372,
+              "draft_n_accepted": 263
+            },
+            "wall_s": 7.268221120997623,
+            "ttft_s": 0.1743624210357666
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r4.json",
+        "original_file_sha256": "df633bbf51477b40af54e66d30512d1c069bd6bb7954fd329a6989b710459fc4",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 4,
+          "wall_s": 8.27209734916687,
+          "total_tokens": 1024,
+          "aggregate_tps": 123.7896456940431,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.2434555292129517,
+          "per_client_tps": [
+            104.33971228354264,
+            75.59027205102063
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.201606750488281,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 84.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 950.2,
+              "prompt_per_token_ms": 135.743,
+              "prompt_per_second": 7.4,
+              "predicted_n": 512,
+              "predicted_ms": 4922.7,
+              "predicted_per_token_ms": 9.615,
+              "predicted_per_second": 104.0,
+              "draft_n": 357,
+              "draft_n_accepted": 287
+            },
+            "wall_s": 5.918011064000893,
+            "ttft_s": 1.0022034645080566
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1413.8,
+              "prompt_per_token_ms": 201.971,
+              "prompt_per_second": 5.0,
+              "predicted_n": 512,
+              "predicted_ms": 6791.9,
+              "predicted_per_token_ms": 13.265,
+              "predicted_per_second": 75.4,
+              "draft_n": 359,
+              "draft_n_accepted": 270
+            },
+            "wall_s": 8.266026599005272,
+            "ttft_s": 1.4847075939178467
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r5.json",
+        "original_file_sha256": "f073b58d6c2bf63b60eec91b73940cfbac428b729c5eafa510725867e45befcb",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 5,
+          "wall_s": 7.706743955612183,
+          "total_tokens": 1024,
+          "aggregate_tps": 132.87063977963166,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.9536113739013672,
+          "per_client_tps": [
+            108.5201552393273,
+            75.00953905056028
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.250690460205078,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 85.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 987.8,
+              "prompt_per_token_ms": 141.114,
+              "prompt_per_second": 7.1,
+              "predicted_n": 512,
+              "predicted_ms": 4732.3,
+              "predicted_per_token_ms": 9.243,
+              "predicted_per_second": 108.2,
+              "draft_n": 365,
+              "draft_n_accepted": 289
+            },
+            "wall_s": 5.764887405006448,
+            "ttft_s": 1.0404047966003418
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 812.6,
+              "prompt_per_token_ms": 116.086,
+              "prompt_per_second": 8.6,
+              "predicted_n": 512,
+              "predicted_ms": 6843.3,
+              "predicted_per_token_ms": 13.366,
+              "predicted_per_second": 74.8,
+              "draft_n": 369,
+              "draft_n_accepted": 282
+            },
+            "wall_s": 7.700581370998407,
+            "ttft_s": 0.8668179512023926
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r6.json",
+        "original_file_sha256": "3860bdaafa53281ad2f6c05e4719a7084a58f41c93c99289bd88797bb5e7049a",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 6,
+          "wall_s": 7.428067922592163,
+          "total_tokens": 1024,
+          "aggregate_tps": 137.85549764368014,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.6176066398620605,
+          "per_client_tps": [
+            97.55138694144252,
+            70.70169898052477
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.590892791748047,
+          "hotspot_peak": {
+            "main": 79.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1010.5,
+              "prompt_per_token_ms": 144.357,
+              "prompt_per_second": 6.9,
+              "predicted_n": 512,
+              "predicted_ms": 5261.9,
+              "predicted_per_token_ms": 10.277,
+              "predicted_per_second": 97.3,
+              "draft_n": 359,
+              "draft_n_accepted": 277
+            },
+            "wall_s": 6.317047995995381,
+            "ttft_s": 1.0628008842468262
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 117.0,
+              "prompt_per_token_ms": 16.714,
+              "prompt_per_second": 59.8,
+              "predicted_n": 512,
+              "predicted_ms": 7260.5,
+              "predicted_per_token_ms": 14.181,
+              "predicted_per_second": 70.5,
+              "draft_n": 368,
+              "draft_n_accepted": 264
+            },
+            "wall_s": 7.422108812999795,
+            "ttft_s": 0.17241239547729492
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r7.json",
+        "original_file_sha256": "f610678a05377b879314eb781daa186d73e79c342b81eda5224bc51d5d302018",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 7,
+          "wall_s": 8.265897274017334,
+          "total_tokens": 1024,
+          "aggregate_tps": 123.88249769553725,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.2552396059036255,
+          "per_client_tps": [
+            102.6994620707076,
+            76.00154601947233
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.258277893066406,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 84.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 944.3,
+              "prompt_per_token_ms": 134.9,
+              "prompt_per_second": 7.4,
+              "predicted_n": 512,
+              "predicted_ms": 4997.7,
+              "predicted_per_token_ms": 9.761,
+              "predicted_per_second": 102.4,
+              "draft_n": 362,
+              "draft_n_accepted": 287
+            },
+            "wall_s": 5.986426486997516,
+            "ttft_s": 0.9952850341796875
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1438.5,
+              "prompt_per_token_ms": 205.5,
+              "prompt_per_second": 4.9,
+              "predicted_n": 512,
+              "predicted_ms": 6759.9,
+              "predicted_per_token_ms": 13.203,
+              "predicted_per_second": 75.7,
+              "draft_n": 370,
+              "draft_n_accepted": 278
+            },
+            "wall_s": 8.25999759700062,
+            "ttft_s": 1.5151941776275635
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r8.json",
+        "original_file_sha256": "3fae8dc5572dc2e7329cffb61396c443ace9aea58c8fc1dfe358d00d449c628f",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 8,
+          "wall_s": 7.243714094161987,
+          "total_tokens": 1024,
+          "aggregate_tps": 141.36394488916736,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.611025333404541,
+          "per_client_tps": [
+            96.78724945939571,
+            72.65717967007198
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.591213226318359,
+          "hotspot_peak": {
+            "main": 79.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 984.8,
+              "prompt_per_token_ms": 140.686,
+              "prompt_per_second": 7.1,
+              "predicted_n": 512,
+              "predicted_ms": 5314.4,
+              "predicted_per_token_ms": 10.38,
+              "predicted_per_second": 96.3,
+              "draft_n": 357,
+              "draft_n_accepted": 266
+            },
+            "wall_s": 6.34473683500255,
+            "ttft_s": 1.0390794277191162
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 137.9,
+              "prompt_per_token_ms": 19.7,
+              "prompt_per_second": 50.8,
+              "predicted_n": 512,
+              "predicted_ms": 7066.7,
+              "predicted_per_token_ms": 13.802,
+              "predicted_per_second": 72.5,
+              "draft_n": 366,
+              "draft_n_accepted": 267
+            },
+            "wall_s": 7.23765144799836,
+            "ttft_s": 0.18297123908996582
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r9.json",
+        "original_file_sha256": "7186496bbd0464f285a56944ad797910b8221dd2673c43d9f145ef5fc635c86c",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 9,
+          "wall_s": 8.26206374168396,
+          "total_tokens": 1024,
+          "aggregate_tps": 123.93997819620913,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.2544962167739868,
+          "per_client_tps": [
+            104.55369996817844,
+            76.11938431833748
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.185916900634766,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 947.7,
+              "prompt_per_token_ms": 135.386,
+              "prompt_per_second": 7.4,
+              "predicted_n": 512,
+              "predicted_ms": 4909.0,
+              "predicted_per_token_ms": 9.588,
+              "predicted_per_second": 104.3,
+              "draft_n": 364,
+              "draft_n_accepted": 287
+            },
+            "wall_s": 5.9176075759969535,
+            "ttft_s": 1.0142054557800293
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1423.5,
+              "prompt_per_token_ms": 203.357,
+              "prompt_per_second": 4.9,
+              "predicted_n": 512,
+              "predicted_ms": 6773.8,
+              "predicted_per_token_ms": 13.23,
+              "predicted_per_second": 75.6,
+              "draft_n": 367,
+              "draft_n_accepted": 274
+            },
+            "wall_s": 8.25580958199862,
+            "ttft_s": 1.4947869777679443
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r10.json",
+        "original_file_sha256": "e66ba0cb96c0e6ec47d1a96f071a80cdf6782aa5f4ce3f7c0338a9b8989c47e2",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 10,
+          "wall_s": 7.418165922164917,
+          "total_tokens": 1024,
+          "aggregate_tps": 138.03951148360886,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.9662522077560425,
+          "per_client_tps": [
+            98.7244632347989,
+            78.46475971916308
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.2024688720703125,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 994.0,
+              "prompt_per_token_ms": 142.0,
+              "prompt_per_second": 7.0,
+              "predicted_n": 512,
+              "predicted_ms": 5202.7,
+              "predicted_per_token_ms": 10.162,
+              "predicted_per_second": 98.4,
+              "draft_n": 374,
+              "draft_n_accepted": 281
+            },
+            "wall_s": 6.254878105006355,
+            "ttft_s": 1.0601167678833008
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 808.3,
+              "prompt_per_token_ms": 115.471,
+              "prompt_per_second": 8.7,
+              "predicted_n": 512,
+              "predicted_ms": 6544.0,
+              "predicted_per_token_ms": 12.781,
+              "predicted_per_second": 78.2,
+              "draft_n": 382,
+              "draft_n_accepted": 288
+            },
+            "wall_s": 7.405646387996967,
+            "ttft_s": 0.8723876476287842
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r11.json",
+        "original_file_sha256": "a246b26d2e7b5af020c9f3c833d9e30248c97adec4955093a9a392edae3cae27",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 11,
+          "wall_s": 7.698397159576416,
+          "total_tokens": 1024,
+          "aggregate_tps": 133.0147014727859,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.6218525171279907,
+          "per_client_tps": [
+            94.74741263692594,
+            67.97694445059064
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.59539794921875,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1037.1,
+              "prompt_per_token_ms": 148.157,
+              "prompt_per_second": 6.7,
+              "predicted_n": 512,
+              "predicted_ms": 5421.2,
+              "predicted_per_token_ms": 10.588,
+              "predicted_per_second": 94.4,
+              "draft_n": 365,
+              "draft_n_accepted": 263
+            },
+            "wall_s": 6.503551656001946,
+            "ttft_s": 1.091376781463623
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 109.8,
+              "prompt_per_token_ms": 15.686,
+              "prompt_per_second": 63.8,
+              "predicted_n": 512,
+              "predicted_ms": 7549.5,
+              "predicted_per_token_ms": 14.745,
+              "predicted_per_second": 67.8,
+              "draft_n": 367,
+              "draft_n_accepted": 265
+            },
+            "wall_s": 7.692151303002902,
+            "ttft_s": 0.1523282527923584
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r12.json",
+        "original_file_sha256": "833b570c902072a74501dd8e3406e53ee05102d2daebe3d74f14e80e2fd8a183",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 12,
+          "wall_s": 8.504719972610474,
+          "total_tokens": 1024,
+          "aggregate_tps": 120.4037291407361,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.2511361837387085,
+          "per_client_tps": [
+            98.72592921690043,
+            73.25153390221072
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.212963104248047,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 946.1,
+              "prompt_per_token_ms": 135.157,
+              "prompt_per_second": 7.4,
+              "predicted_n": 512,
+              "predicted_ms": 5201.5,
+              "predicted_per_token_ms": 10.159,
+              "predicted_per_second": 98.4,
+              "draft_n": 357,
+              "draft_n_accepted": 269
+            },
+            "wall_s": 6.193774089995713,
+            "ttft_s": 0.9986865520477295
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1432.4,
+              "prompt_per_token_ms": 204.629,
+              "prompt_per_second": 4.9,
+              "predicted_n": 512,
+              "predicted_ms": 7005.2,
+              "predicted_per_token_ms": 13.682,
+              "predicted_per_second": 73.1,
+              "draft_n": 358,
+              "draft_n_accepted": 273
+            },
+            "wall_s": 8.498622933999286,
+            "ttft_s": 1.5035858154296875
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r13.json",
+        "original_file_sha256": "c7f7eb62836eab94e14f72e9f7ac0d0a42cc58047180906629f6772288983e04",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 13,
+          "wall_s": 6.839433670043945,
+          "total_tokens": 1024,
+          "aggregate_tps": 149.7199986725539,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.6089441776275635,
+          "per_client_tps": [
+            100.09441564458498,
+            77.12386826819774
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.56353759765625,
+          "hotspot_peak": {
+            "main": 79.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 979.5,
+              "prompt_per_token_ms": 139.929,
+              "prompt_per_second": 7.1,
+              "predicted_n": 512,
+              "predicted_ms": 5128.4,
+              "predicted_per_token_ms": 10.016,
+              "predicted_per_second": 99.8,
+              "draft_n": 362,
+              "draft_n_accepted": 278
+            },
+            "wall_s": 6.153368514998874,
+            "ttft_s": 1.0313751697540283
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 140.6,
+              "prompt_per_token_ms": 20.086,
+              "prompt_per_second": 49.8,
+              "predicted_n": 512,
+              "predicted_ms": 6658.6,
+              "predicted_per_token_ms": 13.005,
+              "predicted_per_second": 76.9,
+              "draft_n": 370,
+              "draft_n_accepted": 291
+            },
+            "wall_s": 6.833155025997257,
+            "ttft_s": 0.18651318550109863
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r14.json",
+        "original_file_sha256": "879b2fcc78d8f618a312737aa414af7aa5c5ea9078d1db2daf45a60b15eff36c",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 14,
+          "wall_s": 8.56606936454773,
+          "total_tokens": 1024,
+          "aggregate_tps": 119.54140883308911,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.2635457515716553,
+          "per_client_tps": [
+            106.49022831282093,
+            72.81451125764995
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.235736846923828,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 952.8,
+              "prompt_per_token_ms": 136.114,
+              "prompt_per_second": 7.3,
+              "predicted_n": 512,
+              "predicted_ms": 4821.5,
+              "predicted_per_token_ms": 9.417,
+              "predicted_per_second": 106.2,
+              "draft_n": 353,
+              "draft_n_accepted": 292
+            },
+            "wall_s": 5.82098522400338,
+            "ttft_s": 1.0065994262695312
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1450.3,
+              "prompt_per_token_ms": 207.186,
+              "prompt_per_second": 4.8,
+              "predicted_n": 512,
+              "predicted_ms": 7049.4,
+              "predicted_per_token_ms": 13.768,
+              "predicted_per_second": 72.6,
+              "draft_n": 367,
+              "draft_n_accepted": 268
+            },
+            "wall_s": 8.559911935000855,
+            "ttft_s": 1.5204920768737793
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r15.json",
+        "original_file_sha256": "521efc273840cf5c3ea7967c89a58c4752963e5c60798822b9c2846a152ff2ed",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 15,
+          "wall_s": 7.869214773178101,
+          "total_tokens": 1024,
+          "aggregate_tps": 130.12734173811884,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.9553507566452026,
+          "per_client_tps": [
+            93.22208217219047,
+            73.46089941592068
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.251548767089844,
+          "hotspot_peak": {
+            "main": 79.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 996.1,
+              "prompt_per_token_ms": 142.3,
+              "prompt_per_second": 7.0,
+              "predicted_n": 512,
+              "predicted_ms": 5508.5,
+              "predicted_per_token_ms": 10.759,
+              "predicted_per_second": 92.9,
+              "draft_n": 367,
+              "draft_n_accepted": 260
+            },
+            "wall_s": 6.547188862998155,
+            "ttft_s": 1.046306848526001
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 806.5,
+              "prompt_per_token_ms": 115.214,
+              "prompt_per_second": 8.7,
+              "predicted_n": 512,
+              "predicted_ms": 7009.3,
+              "predicted_per_token_ms": 13.69,
+              "predicted_per_second": 73.0,
+              "draft_n": 368,
+              "draft_n_accepted": 275
+            },
+            "wall_s": 7.862996403004217,
+            "ttft_s": 0.8643946647644043
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r16.json",
+        "original_file_sha256": "e6d0c4da8c6732deb1c1e101e19709223251dc0c30bef7e97d489d2f82d045ce",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 16,
+          "wall_s": 7.102903604507446,
+          "total_tokens": 1024,
+          "aggregate_tps": 144.16639405752005,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.643578052520752,
+          "per_client_tps": [
+            107.11924395534847,
+            74.14871185529017
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.560321807861328,
+          "hotspot_peak": {
+            "main": 81.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1043.1,
+              "prompt_per_token_ms": 149.014,
+              "prompt_per_second": 6.7,
+              "predicted_n": 512,
+              "predicted_ms": 4796.8,
+              "predicted_per_token_ms": 9.369,
+              "predicted_per_second": 106.7,
+              "draft_n": 366,
+              "draft_n_accepted": 294
+            },
+            "wall_s": 5.897489711998787,
+            "ttft_s": 1.1095690727233887
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 116.1,
+              "prompt_per_token_ms": 16.586,
+              "prompt_per_second": 60.3,
+              "predicted_n": 512,
+              "predicted_ms": 6923.3,
+              "predicted_per_token_ms": 13.522,
+              "predicted_per_second": 74.0,
+              "draft_n": 365,
+              "draft_n_accepted": 267
+            },
+            "wall_s": 7.090421916000196,
+            "ttft_s": 0.17758703231811523
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r17.json",
+        "original_file_sha256": "e693a48eefb4f76680b80058b0f8ed9dda3f81274ae9c389c60c3abef24f35b8",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 17,
+          "wall_s": 8.626203060150146,
+          "total_tokens": 1024,
+          "aggregate_tps": 118.70807965679589,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.0581262111663818,
+          "per_client_tps": [
+            103.16533091967057,
+            73.16479901093385
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.204601287841797,
+          "hotspot_peak": {
+            "main": 81.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 447.8,
+              "prompt_per_token_ms": 63.971,
+              "prompt_per_second": 15.6,
+              "predicted_n": 512,
+              "predicted_ms": 4982.6,
+              "predicted_per_token_ms": 9.732,
+              "predicted_per_second": 102.8,
+              "draft_n": 360,
+              "draft_n_accepted": 282
+            },
+            "wall_s": 5.476741018006578,
+            "ttft_s": 0.5018913745880127
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1543.0,
+              "prompt_per_token_ms": 220.429,
+              "prompt_per_second": 4.5,
+              "predicted_n": 512,
+              "predicted_ms": 7016.2,
+              "predicted_per_token_ms": 13.704,
+              "predicted_per_second": 73.0,
+              "draft_n": 370,
+              "draft_n_accepted": 270
+            },
+            "wall_s": 8.620165649997944,
+            "ttft_s": 1.614361047744751
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r18.json",
+        "original_file_sha256": "dfa0cbfdbd06db015afe3309740bef51a8860e6d4c7edc1819ef468276693b6b",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 18,
+          "wall_s": 7.038260459899902,
+          "total_tokens": 1024,
+          "aggregate_tps": 145.49049524867445,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.16634762287139893,
+          "per_client_tps": [
+            97.15368296016835,
+            74.99227976974349
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.909709930419922,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 81.9,
+              "prompt_per_token_ms": 11.7,
+              "prompt_per_second": 85.5,
+              "predicted_n": 512,
+              "predicted_ms": 5287.1,
+              "predicted_per_token_ms": 10.326,
+              "predicted_per_second": 96.8,
+              "draft_n": 371,
+              "draft_n_accepted": 268
+            },
+            "wall_s": 5.414999315995374,
+            "ttft_s": 0.13601064682006836
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 150.5,
+              "prompt_per_token_ms": 21.5,
+              "prompt_per_second": 46.5,
+              "predicted_n": 512,
+              "predicted_ms": 6846.9,
+              "predicted_per_token_ms": 13.373,
+              "predicted_per_second": 74.8,
+              "draft_n": 362,
+              "draft_n_accepted": 280
+            },
+            "wall_s": 7.032049923000159,
+            "ttft_s": 0.1966845989227295
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r19.json",
+        "original_file_sha256": "7bbc4627531f86a014f1e488ab74244a21e53a736870925cf39af0b4fbb33586",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 19,
+          "wall_s": 8.535840511322021,
+          "total_tokens": 1024,
+          "aggregate_tps": 119.96475316540375,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.2637107372283936,
+          "per_client_tps": [
+            107.5450230463603,
+            73.83133384411138
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.156806945800781,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 85.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 887.8,
+              "prompt_per_token_ms": 126.829,
+              "prompt_per_second": 7.9,
+              "predicted_n": 512,
+              "predicted_ms": 4780.1,
+              "predicted_per_token_ms": 9.336,
+              "predicted_per_second": 107.1,
+              "draft_n": 363,
+              "draft_n_accepted": 292
+            },
+            "wall_s": 5.712826932001917,
+            "ttft_s": 0.9403419494628906
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1512.1,
+              "prompt_per_token_ms": 216.014,
+              "prompt_per_second": 4.6,
+              "predicted_n": 512,
+              "predicted_ms": 6957.6,
+              "predicted_per_token_ms": 13.589,
+              "predicted_per_second": 73.6,
+              "draft_n": 368,
+              "draft_n_accepted": 271
+            },
+            "wall_s": 8.529795667003782,
+            "ttft_s": 1.5870795249938965
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r20.json",
+        "original_file_sha256": "4350b581b87e107579759fcc33cdebb3f098cba9ba7c525d2baa90c55d8b80b5",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 20,
+          "wall_s": 7.322481632232666,
+          "total_tokens": 1024,
+          "aggregate_tps": 139.84330059531698,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.6311674118041992,
+          "per_client_tps": [
+            106.78153951660586,
+            71.78525138968614
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.442237854003906,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1033.8,
+              "prompt_per_token_ms": 147.686,
+              "prompt_per_second": 6.8,
+              "predicted_n": 512,
+              "predicted_ms": 4807.0,
+              "predicted_per_token_ms": 9.389,
+              "predicted_per_second": 106.5,
+              "draft_n": 366,
+              "draft_n_accepted": 288
+            },
+            "wall_s": 5.88762029499776,
+            "ttft_s": 1.0863029956817627
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 130.6,
+              "prompt_per_token_ms": 18.657,
+              "prompt_per_second": 53.6,
+              "predicted_n": 512,
+              "predicted_ms": 7151.1,
+              "predicted_per_token_ms": 13.967,
+              "predicted_per_second": 71.6,
+              "draft_n": 373,
+              "draft_n_accepted": 269
+            },
+            "wall_s": 7.316186436000862,
+            "ttft_s": 0.17603182792663574
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r21.json",
+        "original_file_sha256": "e878cbbc623eee326750c8aec0c1ff65d78fdccb9525fb85ff9b2529c23ba8c2",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 21,
+          "wall_s": 8.539844989776611,
+          "total_tokens": 1024,
+          "aggregate_tps": 119.90849965378426,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 1.2887407541275024,
+          "per_client_tps": [
+            106.87331526434787,
+            73.62501109526224
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.082088470458984,
+          "hotspot_peak": {
+            "main": 80.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 954.5,
+              "prompt_per_token_ms": 136.357,
+              "prompt_per_second": 7.3,
+              "predicted_n": 512,
+              "predicted_ms": 4806.0,
+              "predicted_per_token_ms": 9.387,
+              "predicted_per_second": 106.5,
+              "draft_n": 366,
+              "draft_n_accepted": 290
+            },
+            "wall_s": 5.805592602999241,
+            "ttft_s": 1.0059599876403809
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1499.0,
+              "prompt_per_token_ms": 214.143,
+              "prompt_per_second": 4.7,
+              "predicted_n": 512,
+              "predicted_ms": 6974.2,
+              "predicted_per_token_ms": 13.621,
+              "predicted_per_second": 73.4,
+              "draft_n": 366,
+              "draft_n_accepted": 269
+            },
+            "wall_s": 8.533588475002034,
+            "ttft_s": 1.571521520614624
+          }
+        ]
+      },
+      {
+        "original_file": "replica-pin12-q6-soak128-131072-r22.json",
+        "original_file_sha256": "274ad54feb7fd22738e64116cdf88086b34477d00c220412db7531873f2c176f",
+        "summary": {
+          "case": "replica-pin12-q6",
+          "clients": 2,
+          "nominal_context": 131072,
+          "label": "soak128",
+          "repeat": 22,
+          "wall_s": 8.089305639266968,
+          "total_tokens": 1024,
+          "aggregate_tps": 126.58688466774167,
+          "max_decode_overlap": 2,
+          "quality_pass": true,
+          "mean_ttft_s": 0.9739189147949219,
+          "per_client_tps": [
+            109.46076733117377,
+            71.29761444499671
+          ],
+          "prompt_tokens": [
+            130041,
+            130041
+          ],
+          "cached_tokens": [
+            130034,
+            130034
+          ],
+          "min_available_gib": 5.10540771484375,
+          "hotspot_peak": {
+            "main": 79.0,
+            "secondary": 86.0
+          }
+        },
+        "requests": [
+          {
+            "client": 0,
+            "input_sha256": "40c46daa27bdffc3976aeaf7bb283977294843de8d95a50d25cdf7eeeb64d51a",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 1002.0,
+              "prompt_per_token_ms": 143.143,
+              "prompt_per_second": 7.0,
+              "predicted_n": 512,
+              "predicted_ms": 4695.3,
+              "predicted_per_token_ms": 9.171,
+              "predicted_per_second": 109.0,
+              "draft_n": 364,
+              "draft_n_accepted": 293
+            },
+            "wall_s": 5.742519491999701,
+            "ttft_s": 1.0536487102508545
+          },
+          {
+            "client": 1,
+            "input_sha256": "979b138fad3340a3d07d9f6d87a3ba9dc7f822713647f83701ca169a0c363f1e",
+            "usage": {
+              "prompt_tokens": 130041,
+              "completion_tokens": 512,
+              "total_tokens": 130553,
+              "prompt_tokens_details": {
+                "cached_tokens": 130034
+              }
+            },
+            "timings": {
+              "cache_n": 130034,
+              "prompt_n": 7,
+              "prompt_ms": 839.2,
+              "prompt_per_token_ms": 119.886,
+              "prompt_per_second": 8.3,
+              "predicted_n": 512,
+              "predicted_ms": 7200.2,
+              "predicted_per_token_ms": 14.063,
+              "predicted_per_second": 71.1,
+              "draft_n": 368,
+              "draft_n_accepted": 260
+            },
+            "wall_s": 8.083062776000588,
+            "ttft_s": 0.8941891193389893
+          }
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Single-request means one request using both GPUs, not a single-GPU run",
+    "Solo uses fixture route0; dual uses route0 and route1, two fixed synthetic documents",
+    "All throughput figures here describe cached long contexts, not cold 128K prefill",
+    "Historical replicas differ in date, binary, input prefix, power caps, cache budget and statistic",
+    "No current same-day controlled architecture comparison, no 128GB host test, no model quality benchmark"
+  ]
+}
