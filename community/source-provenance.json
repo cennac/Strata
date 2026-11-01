@@ -1,0 +1,57 @@
+{
+  "base_repository": "nicejunjie/Strata-rdna3",
+  "base_revision": "fc8f82334239199cd3cfcfa5ab5b8ac09827d19b",
+  "base_archive_sha256": "3eb4bf99438d255bc9c0f236dc758b74beccbb1dc26cbc2d04dff5ed23a666be",
+  "engine_overlays": [
+    {
+      "path": "src/kernels/cpu/iq_avx512.cpp",
+      "sha256": "e15c9aab6ae0c48800e3b4e521fa18e2b3df53939ac4f2c56ca3612288db33e9"
+    },
+    {
+      "path": "include/strata/core/conversation_snapshot.hpp",
+      "sha256": "1cd91f14751139295a830359a16fe94946ddc19c245080ecd769fc3185572b21"
+    },
+    {
+      "path": "src/core/conversation_snapshot.cpp",
+      "sha256": "18d28119f802e4f0d3e0b97867266b880077fd0b0fe1141388ee6f160d3e8bec"
+    },
+    {
+      "path": "src/core/conversation_state.cpp",
+      "sha256": "29f2a8cc2fc480169f5931d411803f6cae12767ac273067146ed37f35840ecd0"
+    },
+    {
+      "path": "src/core/conversation_copy.hpp",
+      "sha256": "3d60d8b0d92954eafd1f31bc193aefac7d7f30633bdf64d9d95364d39682c804"
+    },
+    {
+      "path": "include/strata/core/verify.hpp",
+      "sha256": "898cae921ef8d78dbaffb79333a236a7ee39cbf4785dc2004cfdcb1b153455c5"
+    },
+    {
+      "path": "src/core/verify.cpp",
+      "sha256": "96778420e31b45ae6fd84619054833ad2aa6ea1ba887cf7e219785ab8466a474"
+    },
+    {
+      "path": "src/program/generate.cpp",
+      "sha256": "0df8ab25103eb4e415f553354b29e1c9857690444b920b11729c32877e149f20"
+    }
+  ],
+  "dependencies": {
+    "llama.cpp": {
+      "repository": "ggml-org/llama.cpp",
+      "revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+      "archive_sha256": "c076d7534afa0e5d0ec2a0d425b11e791c16f3de0d727221aea071cef156a280",
+      "url": "https://codeload.github.com/ggml-org/llama.cpp/tar.gz/3cf03257f219afbe7334045ff7c6a06ac68c627d"
+    },
+    "rocWMMA": {
+      "repository": "ROCm/rocWMMA",
+      "revision": "1ab208f4",
+      "archive_sha256": "8fee4b8f2fb231b3696292b0e7e1137df091004fa5966a188846611388d3ac48",
+      "url": "https://codeload.github.com/ROCm/rocWMMA/tar.gz/1ab208f4"
+    }
+  },
+  "measured_binary_sha256": "3029ce1dcbcf402be45b24cc4fac5ace2b8a4aa58da8555d073951d45eb85710",
+  "runtime_source": "Saved module files from measured deployment; file hashes in runtime-source-manifest.json",
+  "upstream_mtp": "https://github.com/Niko1221/Strata/commit/99866a47a2b8",
+  "scope": "Linux gfx1100 reproduction branch, not the mainline PR"
+}

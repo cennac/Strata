@@ -162,6 +162,7 @@ public:
     void set_stage(int64_t layer_begin, int64_t layer_end, const float* handoff_in, float* handoff_out) {
         lb_ = layer_begin; le_ = layer_end; hand_in_ = handoff_in; hand_out_ = handoff_out;
     }
+    void set_handoff_rows(int rows) { handoff_rows_ = rows; }
     /// The next stage: `run` and `commit` continue into it (its pool calls get `next_user`); sampling settings
     /// and `final_R` are the last stage's.
     void set_next(Verifier* next, void* next_user) { next_ = next; next_user_ = next_user; }
@@ -212,6 +213,23 @@ public:
     /// -1 = an error (err).  Serves every layer that has rung so far.
     int batch_poll(PoolMultiFn pool, void* user, std::string& err);
     bool batch_busy() const { return b_running_; }
+    // ---- STRATA_PIPED_MTP: the pipelined groups with --batch-mtp's drafts.  A group's window holds its slot's token
+    // and its drafts, so how many rows to keep is known only once the LAST stage has picked - and by then this stage
+    // runs another group's window, which reuses the scratch the commit replays from.  So right behind the window a
+    // save graph copies those rows (each GDN layer's conv and recurrence inputs, each QSA layer's raw indexer keys, the
+    // PLE history snapshot) to the group's own rows [hbase, hbase + S) of the saved buffers, and the commit, queued
+    // after the verdict, replays from there.  Everything else the commit reads is per slot already.
+    /// The saved buffers for `rows` hand-off rows (after init_slots).
+    bool init_deferred_commit(int rows, std::string& err);
+    bool deferred_commit_on() const { return dc_rows_ > 0; }
+    /// The window over the slots `rows` (a slot's rows contiguous) at hand-off rows [hbase, hbase + S), its save right
+    /// behind it, and no commit (batch_commit_rows, after the verdict).  The PLE history advances at the commit.
+    bool batch_launch_rows(const int* rows, int S, int hbase, const int32_t* tokens, const int64_t* pos,
+                           std::string& err);
+    /// Queue the commit of that window's accepted prefixes on this stage's stream (no host wait): `keep` per slot ID,
+    /// 1..the slot's rows.  `rows`, `S`, `hbase`, `tokens` and `pos` are the window's, as batch_launch_rows got them.
+    bool batch_commit_rows(const int* rows, int S, int hbase, const int* keep, const int32_t* tokens,
+                           const int64_t* pos, std::string& err);
     /// A slot's sampling (temperature / top_p / top_k / min_p / seed; penalties are not applied in batch windows):
     /// its row is drawn again on the last stage with Philox(seed, position), as a solo window draws it.  Greedy by
     /// default.  Set on the first stage, it reaches the last.
@@ -583,6 +601,18 @@ private:
     float *sh_gate_ = nullptr, *sh_up_ = nullptr, *sh_g_ = nullptr;
     float* hist_snap_ = nullptr;                              // T * NG_HIST * NG_HC_DIM
     int64_t cap_ = 0, max_blocks_ = 0, attn_scratch_floats_ = 0;
+    int handoff_rows_ = 0;
+    // STRATA_PIPED_MTP (init_deferred_commit): the saved rows, laid out as the window scratch (global layer index) with
+    // dc_rows_ rows per layer instead of max_t_; the slots' accepted prefixes (mapped and device, 2 + max_t_ per slot)
+    int dc_rows_ = 0;
+    bool staging_deferred_ = false;   ///< stage_batch for batch_launch_rows: no capture_commit_batch
+    float *dc_qkv_ = nullptr, *dc_h_ = nullptr, *dc_gate_ = nullptr, *dc_beta_ = nullptr, *dc_idx_ = nullptr;
+    float* dc_hist_ = nullptr;
+    void* dc_arena_ = nullptr;
+    int32_t *h_commitd_ = nullptr, *m_commitd_ = nullptr, *commitd_ = nullptr;
+    std::map<std::vector<int>, cudaGraphExec_t> save_bm_, dcommit_bm_;
+    bool capture_deferred(const int* rows, int S, int hbase, std::string& err);
+
 };
 
 }  // namespace strata::core

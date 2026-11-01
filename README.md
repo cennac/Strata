@@ -1,3 +1,11 @@
+# 双 7900 XTX 完整实验版
+
+**本分支入口：[中文构建与复现说明](community/README.zh-CN.md)。** 包含 DIRECT 复制、双流 MTP 移植、单/双流共存与惩罚历史兼容。按说明使用 `community/build.py`，不要用自动安装器替换成其他引擎。
+
+以下保留原项目说明。
+
+---
+
 <h1 align="center">Strata</h1>
 
 **English** · [简体中文](README.zh-CN.md) · [日本語](README.ja.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português](README.pt-BR.md)

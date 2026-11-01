@@ -61,6 +61,13 @@ bool conversation_checkpoint_save(ConversationCheckpoint& checkpoint, const Sess
 bool conversation_checkpoint_restore(const ConversationCheckpoint& checkpoint, SessionState& session,
                                      const ModelGeometry& g, std::string& error);
 
+// Experimental same-device slot transfer. Caller synchronizes before copying and after all layers.
+// Same authoritative bytes as save+restore, without a temporary host snapshot. Synchronous copies.
+bool conversation_kv_copy(const QsaState& from, const QsaState& to, const ModelGeometry& g,
+                          int64_t upto, bool include_index, std::string& error);
+bool conversation_checkpoint_copy(const SessionState& from, SessionState& to, const std::vector<int32_t>& ids,
+                                  const ModelGeometry& g, std::string& error);
+
 struct ConversationView {
     const std::vector<int32_t>& ids;
     const std::vector<ConversationImageKey>& images;

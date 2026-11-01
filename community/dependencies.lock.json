@@ -1,0 +1,14 @@
+{
+  "llama.cpp": {
+    "repository": "ggml-org/llama.cpp",
+    "revision": "3cf03257f219afbe7334045ff7c6a06ac68c627d",
+    "archive_sha256": "c076d7534afa0e5d0ec2a0d425b11e791c16f3de0d727221aea071cef156a280",
+    "url": "https://codeload.github.com/ggml-org/llama.cpp/tar.gz/3cf03257f219afbe7334045ff7c6a06ac68c627d"
+  },
+  "rocWMMA": {
+    "repository": "ROCm/rocWMMA",
+    "revision": "1ab208f4",
+    "archive_sha256": "8fee4b8f2fb231b3696292b0e7e1137df091004fa5966a188846611388d3ac48",
+    "url": "https://codeload.github.com/ROCm/rocWMMA/tar.gz/1ab208f4"
+  }
+}

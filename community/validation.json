@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "build": "Full source HIP gfx1100 compilation including kernels, no reused objects or static archives",
+  "environment": {
+    "python": "3.14.4",
+    "gcc": "15.2",
+    "rocm": "existing ROCm 10 development environment",
+    "clang": "23.0.0git",
+    "llvm_revision": "8f497e0992fb7513f7f78a6f6b6f1056c375e961",
+    "gpus": "2 x RX 7900 XTX 24GB",
+    "power_caps_w": [
+      303,
+      231
+    ]
+  },
+  "checks": {
+    "engine_help": true,
+    "python_server_help": true,
+    "batch_groups_test": true,
+    "row_bounds_test": true,
+    "direct_snapshot_gpu0_checks": 5053,
+    "direct_snapshot_gpu1_checks": 5053,
+    "generated_config_matches_measured_engine_args_and_env": true,
+    "config_refuses_overwrite": true
+  },
+  "binary_sha256": {
+    "historical_production": "3029ce1dcbcf402be45b24cc4fac5ace2b8a4aa58da8555d073951d45eb85710",
+    "clean_rebuild": "26a970b01b23d62db4c670a3bb6fa4598b64cacf217af1911bb2832afed7dcb4"
+  },
+  "configuration": {
+    "max_context_per_request": 131072,
+    "max_active_requests": 2,
+    "internal_slots": 4,
+    "batch_groups": 2,
+    "layer_split": [
+      26,
+      22
+    ],
+    "kv": "int8",
+    "resident_kv": 32768,
+    "conversation_cache_budget_mib": 16384
+  },
+  "measurement": "Cached public synthetic 130020-input-token requests, 512 output tokens, E2E includes first-token wait; dual is aggregate",
+  "production_control": {
+    "solo_mean_e2e_tps": 122.67548753209618,
+    "dual_aggregate_e2e_tps": 156.42885839742638,
+    "dual_wall_s": 32.730533563008066,
+    "dual_batches": 5
+  },
+  "clean_source": {
+    "solo_mean_e2e_tps": 113.29355589007663,
+    "dual_aggregate_e2e_tps": 158.09487512908103,
+    "dual_wall_s": 123.0653427830257,
+    "dual_batches": 19
+  },
+  "historical_post": {
+    "single_e2e_tps": 116.48,
+    "dual_aggregate_e2e_tps": 161.08,
+    "input_tokens": 130037,
+    "note": "Historical campaign added a fixed prefix absent from the public reconstruction fixture; not an identical input comparison"
+  },
+  "restored": true,
+  "production_config_unchanged": true,
+  "hardware_unchanged": true,
+  "thermal_guard_issues": [],
+  "peak_gpu_in_enumeration_order": [
+    {
+      "edge": 71.0,
+      "hotspot": 82.0,
+      "memory": 78.0
+    },
+    {
+      "edge": 65.0,
+      "hotspot": 84.0,
+      "memory": 70.0
+    }
+  ],
+  "minimum_available_gib": 15.835559844970703,
+  "vision": "Existing official GPU reader reused; reader source not rebuilt or separately image-tested in this validation",
+  "limitations": [
+    "One same-day comparison; unequal dual durations (32.73 and 123.07 seconds)",
+    "No full quality benchmark, default-path byte identity proof, CUDA/SYCL build, or other hardware validation"
+  ]
+}
