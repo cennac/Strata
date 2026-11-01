@@ -145,7 +145,7 @@ STRATA_HYBRID_PENALTIES=1
 
 ## 验证边界与回退
 
-原部署版此前通过单/双128K、1→2→1切换、历史增长/分支、取消、排队和识图等功能检查。强惩罚逐字一致性仍无结论，604秒历史长测后的短答长度断言失败仍保留。历史数据见[完整证据归档](https://github.com/cennac/Strata/tree/0c6fd25c2eb256e366ba6305cf19396e98c75f39/bench/results/2026-11-01-community-dual-rx7900xtx-hybrid)。
+原部署版此前通过单/双128K、1→2→1切换、历史增长/分支、取消、排队和识图等功能检查。强惩罚逐字一致性仍无结论，604秒历史长测后的短答长度断言失败仍保留。历史数据见[完整证据归档](https://github.com/cennac/Strata/tree/c806e6da83895b5fe812af8f86407f0f68632127/bench/results/2026-11-01-community-dual-rx7900xtx-hybrid)。
 
 本次完整重建的单请求三次均值为 **113.29 t/s**，双请求持续123.07秒、19批、合计 **158.09 t/s**；原部署版同日对照为 **122.68 / 156.43 t/s**，双路持续32.73秒、5批。持续时间不同，且为一次对照，不能据此判断重建使性能变快或变慢。逐请求数字见 [validation.json](validation.json) 和 [results/](results/)。
 
