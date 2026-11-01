@@ -1,0 +1,99 @@
+{
+  "applied": true,
+  "preflight_passed": true,
+  "single": [
+    {
+      "case": "production-hybrid",
+      "clients": 1,
+      "nominal_context": 131072,
+      "label": "single",
+      "repeat": 0,
+      "wall_s": 4.786259889602661,
+      "total_tokens": 512,
+      "aggregate_tps": 106.97287899310133,
+      "max_decode_overlap": 1,
+      "quality_pass": true,
+      "mean_ttft_s": 1.0356924533843994,
+      "per_client_tps": [
+        136.93917150755902
+      ],
+      "prompt_tokens": [
+        130037
+      ],
+      "cached_tokens": [
+        130030
+      ],
+      "min_available_gib": 15.701915740966797,
+      "hotspot_peak": {
+        "main": 74.0,
+        "secondary": 71.0
+      }
+    },
+    {
+      "case": "production-hybrid",
+      "clients": 1,
+      "nominal_context": 131072,
+      "label": "single",
+      "repeat": 1,
+      "wall_s": 4.267203092575073,
+      "total_tokens": 512,
+      "aggregate_tps": 119.98491491789534,
+      "max_decode_overlap": 1,
+      "quality_pass": true,
+      "mean_ttft_s": 0.42887139320373535,
+      "per_client_tps": [
+        134.0205837213459
+      ],
+      "prompt_tokens": [
+        130037
+      ],
+      "cached_tokens": [
+        130030
+      ],
+      "min_available_gib": 16.47509765625,
+      "hotspot_peak": {
+        "main": 75.0,
+        "secondary": 73.0
+      }
+    },
+    {
+      "case": "production-hybrid",
+      "clients": 1,
+      "nominal_context": 131072,
+      "label": "single",
+      "repeat": 2,
+      "wall_s": 4.179755449295044,
+      "total_tokens": 512,
+      "aggregate_tps": 122.49520485375615,
+      "max_decode_overlap": 1,
+      "quality_pass": true,
+      "mean_ttft_s": 0.3587157726287842,
+      "per_client_tps": [
+        134.62888461360996
+      ],
+      "prompt_tokens": [
+        130037
+      ],
+      "cached_tokens": [
+        130030
+      ],
+      "min_available_gib": 16.482982635498047,
+      "hotspot_peak": {
+        "main": 75.0,
+        "secondary": 73.0
+      }
+    }
+  ],
+  "soak": {
+    "wall_s": 184.35097575187683,
+    "aggregate_tps": 161.0840363018505,
+    "batches": 29
+  },
+  "transitions": {
+    "passed": true,
+    "cycles": 3
+  },
+  "gpu_faults": [],
+  "config_sha256": "85cc928fdbe4515013549a692562ddd479d4e3c85a9b501e3cd46069c22eee54",
+  "penalty_exactness_conclusive": false
+}

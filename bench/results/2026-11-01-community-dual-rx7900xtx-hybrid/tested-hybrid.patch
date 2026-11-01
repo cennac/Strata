@@ -1,0 +1,93 @@
+--- a/src/program/generate.cpp
++++ b/src/program/generate.cpp
+@@ -3477,6 +3477,21 @@
+         std::fprintf(stderr, "strata generate: --tensor-parallel: --pipeline-windows is off\n");
+         o.pipeline_windows = 0;
+     }
++    // Experimental coexistence: the HTTP scheduler already drains GEN before BGEN.
++    // Opt in only to the two-stage, two-group MTP configuration validated here.
++    const bool hybrid_windows = [] {
++        const char* e = std::getenv("STRATA_HYBRID_WINDOWS");
++        return e && std::atoi(e) == 1;
++    }() && o.batch == 4 && o.batch_groups == 2 && split_devs.size() == 1 &&
++        !o.tensor_parallel && !o.adapt_async && o.pipeline_windows == 2 &&
++        [] { const char* e = std::getenv("STRATA_BATCH_MTP"); return e && std::atoi(e) == 1; }() &&
++        [] { const char* e = std::getenv("STRATA_PIPED_MTP"); return e && std::atoi(e) == 2; }();
++    const bool hybrid_penalties = hybrid_windows && [] {
++        const char* e = std::getenv("STRATA_HYBRID_PENALTIES");
++        return e && std::atoi(e) == 1;
++    }();
++    if (hybrid_windows)
++        std::fprintf(stderr, "strata hybrid: solo window pipeline and batch MTP coexist (experimental)\n");
+     if (o.pipeline_windows > 0) {
+         const bool helpers = o.expert_cache_remote[0] > 0 || o.expert_cache_remote[1] > 0 || o.expert_cache_remote[2] > 0;
+         const char* off = !o.serve ? "it needs --serve"
+@@ -3486,7 +3501,7 @@
+                         : split_devs.size() > 1 && o.pipeline_windows == 1 ? "--pipeline-windows 1 needs exactly two stages"
+                         : split_devs.size() > 1 && o.adapt_async ? "not with --adapt-async on three or more stages"
+                         : o.mtp.empty() || o.spec < 2 ? "it needs the MTP drafter (--mtp, --spec)"
+-                        : o.batch != 0 ? "not with --batch slots"
++                        : o.batch != 0 && !hybrid_windows ? "not with --batch slots"
+                         : o.peer_device >= 1 ? "not with --peer-device"
+                         : helpers ? "not with the helper caches (--expert-cache-device1..3, --remote-expert-opt)"
+                         : nullptr;
+@@ -11403,6 +11418,14 @@
+                                  pl_theta, pl_force_miss, (long long) req_short_read);
+                 }
+             }
++            // Apply this AFTER the diagnostic override: an admission can interleave
++            // with active batch slots, so it must never borrow their verifier.
++            if (hybrid_windows) {
++                const bool solo = admit_slot < 0 && !batch_on();
++                if (!solo) pl_pw = 0;
++                std::fprintf(stderr, "strata hybrid request: admit=%d batch=%d solo_pw=%d\n",
++                             admit_slot, (int) batch_on(), pl_pw);
++            }
+             // --pipeline-windows: tokens [a, b) through the windows with the stages overlapped.  The tokens are known,
+             // so every window commits whole: stage 0 queues window K, its commit and window K+1 back to back (each
+             // parity's verifier keeps its own window), and stage 1 runs window K once stage 0 is done with it.  Every
+@@ -12161,7 +12184,7 @@
+             // with --adapt-async it has no such point: the whole refill first
+             if (pl_want && o.adapt_async) late_apply(true);
+             const char* pl_serial = !pl_want ? nullptr
+-                                  : hist_n > 0 ? "repetition penalties (penalty_last_n)"
++                                  : hist_n > 0 && !hybrid_penalties ? "repetition penalties (penalty_last_n)"
+                                   : mtp.coupled() ? "coupled draft sampling" : nullptr;
+             if (pl_serial != nullptr) {   // said once per reason
+                 static std::set<std::string> said;
+@@ -12170,6 +12193,9 @@
+                                  pl_serial);
+             }
+             if (pl_want && pl_serial == nullptr && !cancelled && produced_n < max_new) {
++                if (hybrid_penalties && hist_n > 0)
++                    std::fprintf(stderr, "strata hybrid: penalty-aware solo pipeline, history=%d repeat=%.4f freq=%.4f presence=%.4f\n",
++                                 hist_n, req_sp.penalty_repeat, req_sp.penalty_freq, req_sp.penalty_present);
+                 pl_ran = true;
+                 if (!pl_prepare(err)) {
+                     std::printf("ERR %s\n", err.c_str());
+@@ -12657,6 +12683,25 @@
+                     if (A.finished && !A.s1) {
+                         if (chain_kind == 1 && !B.ready) ++pl_late;   // stage 0 idles until the chain has B
+                         if (ajob) a_gap(1);   // --adapt-async: stage 1 is idle until this launch
++                        if (hybrid_penalties && hist_n > 0) {
++                            // Only the last stage samples tokens. It never evaluates a
++                            // speculative B: A reaches it after the preceding verdict,
++                            // so consumed is the exact accepted prefix, as in serial.
++                            // No other last-stage window is in flight here; the shared
++                            // history buffer is read on this same verifier's stream.
++                            if ((int64_t) consumed.size() != A.p)
++                                return die("hybrid: penalty prefix position mismatch");
++                            strata::kernels::penalty_rows(consumed.data(), (int64_t) consumed.size(),
++                                                          A.tok, A.T, hist_n, hist_stage.data());
++                            const strata::core::OnDevice on_h(hist_dev);
++                            if (cudaMemcpyAsync(d_hist, hist_stage.data(), (size_t) A.T * hist_n * sizeof(int32_t),
++                                                cudaMemcpyHostToDevice, V1(A).stream()) != cudaSuccess)
++                                return die("hybrid: penalty history upload failed");
++                            // The pageable source must remain valid until staging lands.
++                            // Stream order also fences the previous parity's commit.
++                            if (cudaStreamSynchronize(V1(A).stream()) != cudaSuccess)
++                                return die("hybrid: penalty history staging failed");
++                        }
+                         if (!V1(A).pl_launch(A.T, A.tok, A.p, err)) return die(err);
+                         A.s1 = true;
+                         tre("L1", A.seq, A.T);

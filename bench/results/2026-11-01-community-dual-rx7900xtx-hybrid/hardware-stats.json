@@ -1,0 +1,162 @@
+{
+  "run3/control-a": {
+    "samples": 613,
+    "min_available_gib": 8.366008758544922,
+    "gpus": {
+      "main": {
+        "edge_c": 68.0,
+        "hotspot_c": 87.0,
+        "memory_c": 74.0,
+        "power_w": 331.0,
+        "fan_rpm": 1851
+      },
+      "secondary": {
+        "edge_c": 70.0,
+        "hotspot_c": 81.0,
+        "memory_c": 76.0,
+        "power_w": 279.0,
+        "fan_rpm": 4128
+      }
+    }
+  },
+  "run3/patch-off": {
+    "samples": 618,
+    "min_available_gib": 8.4007568359375,
+    "gpus": {
+      "main": {
+        "edge_c": 68.0,
+        "hotspot_c": 88.0,
+        "memory_c": 75.0,
+        "power_w": 344.0,
+        "fan_rpm": 1862
+      },
+      "secondary": {
+        "edge_c": 74.0,
+        "hotspot_c": 85.0,
+        "memory_c": 80.0,
+        "power_w": 274.0,
+        "fan_rpm": 4136
+      }
+    }
+  },
+  "run3/hybrid": {
+    "samples": 632,
+    "min_available_gib": 7.066600799560547,
+    "gpus": {
+      "main": {
+        "edge_c": 68.0,
+        "hotspot_c": 88.0,
+        "memory_c": 75.0,
+        "power_w": 331.0,
+        "fan_rpm": 1858
+      },
+      "secondary": {
+        "edge_c": 74.0,
+        "hotspot_c": 87.0,
+        "memory_c": 80.0,
+        "power_w": 282.0,
+        "fan_rpm": 4137
+      }
+    }
+  },
+  "run3/control-b": {
+    "samples": 637,
+    "min_available_gib": 8.426509857177734,
+    "gpus": {
+      "main": {
+        "edge_c": 69.0,
+        "hotspot_c": 89.0,
+        "memory_c": 76.0,
+        "power_w": 339.0,
+        "fan_rpm": 1859
+      },
+      "secondary": {
+        "edge_c": 74.0,
+        "hotspot_c": 88.0,
+        "memory_c": 80.0,
+        "power_w": 301.0,
+        "fan_rpm": 4142
+      }
+    }
+  },
+  "run6/hybrid": {
+    "samples": 568,
+    "min_available_gib": 7.709686279296875,
+    "gpus": {
+      "main": {
+        "edge_c": 65.0,
+        "hotspot_c": 85.0,
+        "memory_c": 72.0,
+        "power_w": 371.0,
+        "fan_rpm": 1857
+      },
+      "secondary": {
+        "edge_c": 72.0,
+        "hotspot_c": 84.0,
+        "memory_c": 78.0,
+        "power_w": 278.0,
+        "fan_rpm": 4154
+      }
+    }
+  },
+  "run6/confirm": {
+    "samples": 1140,
+    "min_available_gib": 17.383792877197266,
+    "gpus": {
+      "main": {
+        "edge_c": 69.0,
+        "hotspot_c": 87.0,
+        "memory_c": 78.0,
+        "power_w": 345.0,
+        "fan_rpm": 1872
+      },
+      "secondary": {
+        "edge_c": 79.0,
+        "hotspot_c": 92.0,
+        "memory_c": 86.0,
+        "power_w": 280.0,
+        "fan_rpm": 4155
+      }
+    }
+  },
+  "run7/hybrid": {
+    "samples": 483,
+    "min_available_gib": 8.568107604980469,
+    "gpus": {
+      "main": {
+        "edge_c": 66.0,
+        "hotspot_c": 86.0,
+        "memory_c": 74.0,
+        "power_w": 338.0,
+        "fan_rpm": 1858
+      },
+      "secondary": {
+        "edge_c": 73.0,
+        "hotspot_c": 86.0,
+        "memory_c": 80.0,
+        "power_w": 248.0,
+        "fan_rpm": 4143
+      }
+    }
+  },
+  "adoption2/production-hybrid": {
+    "samples": 381,
+    "min_available_gib": 13.132743835449219,
+    "gpus": {
+      "main": {
+        "edge_c": 66.0,
+        "hotspot_c": 85.0,
+        "memory_c": 74.0,
+        "power_w": 357.0,
+        "fan_rpm": 1858
+      },
+      "secondary": {
+        "edge_c": 74.0,
+        "hotspot_c": 85.0,
+        "memory_c": 80.0,
+        "power_w": 290.0,
+        "fan_rpm": 4140
+      }
+    }
+  }
+}

@@ -1,0 +1,520 @@
+SOURCE: evidence/run6/confirm-engine.log
+strata hybrid: solo window pipeline and batch MTP coexist (experimental)
+strata verify: pipelined batch windows commit after the verdict (layers [0, 26), 12 rows, 38.2 MiB saved rows)
+strata verify: pipelined batch windows commit after the verdict (layers [26, 48), 12 rows, 38.2 MiB saved rows)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 442 group-steps, 1018 rows in 30954 ms = 32.9 rows/s (admissions included) (576 of 823 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 414 group-steps, 1018 rows in 5859 ms = 173.7 rows/s (admissions included) (604 of 784 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 451 group-steps, 1018 rows in 6092 ms = 167.1 rows/s (admissions included) (567 of 835 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 431 group-steps, 1018 rows in 5745 ms = 177.2 rows/s (admissions included) (587 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 432 group-steps, 1018 rows in 5698 ms = 178.7 rows/s (admissions included) (586 of 809 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 439 group-steps, 1018 rows in 5980 ms = 170.2 rows/s (admissions included) (579 of 809 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 424 group-steps, 1018 rows in 5753 ms = 176.9 rows/s (admissions included) (594 of 792 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 432 group-steps, 1018 rows in 5811 ms = 175.2 rows/s (admissions included) (586 of 804 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 428 group-steps, 1018 rows in 5628 ms = 180.9 rows/s (admissions included) (590 of 800 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 434 group-steps, 1018 rows in 5873 ms = 173.3 rows/s (admissions included) (584 of 801 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 436 group-steps, 1018 rows in 5783 ms = 176.0 rows/s (admissions included) (582 of 803 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 432 group-steps, 1018 rows in 5710 ms = 178.3 rows/s (admissions included) (586 of 807 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 434 group-steps, 1018 rows in 5681 ms = 179.2 rows/s (admissions included) (584 of 814 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 436 group-steps, 1018 rows in 5732 ms = 177.6 rows/s (admissions included) (582 of 814 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 426 group-steps, 1018 rows in 5656 ms = 180.0 rows/s (admissions included) (592 of 794 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 429 group-steps, 1018 rows in 5686 ms = 179.0 rows/s (admissions included) (589 of 802 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 434 group-steps, 1018 rows in 5712 ms = 178.2 rows/s (admissions included) (584 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5717 ms = 178.1 rows/s (admissions included) (583 of 805 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 438 group-steps, 1018 rows in 5783 ms = 176.0 rows/s (admissions included) (580 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 436 group-steps, 1018 rows in 5719 ms = 178.0 rows/s (admissions included) (582 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5740 ms = 177.4 rows/s (admissions included) (583 of 807 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5758 ms = 176.8 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5734 ms = 177.5 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5785 ms = 176.0 rows/s (admissions included) (581 of 807 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5786 ms = 175.9 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5721 ms = 178.0 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5770 ms = 176.4 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5780 ms = 176.1 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5770 ms = 176.4 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5779 ms = 176.2 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5780 ms = 176.1 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5777 ms = 176.2 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5800 ms = 175.5 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5804 ms = 175.4 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5780 ms = 176.1 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5789 ms = 175.9 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5785 ms = 176.0 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5770 ms = 176.4 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5772 ms = 176.4 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5795 ms = 175.7 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5758 ms = 176.8 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5791 ms = 175.8 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5792 ms = 175.8 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5826 ms = 174.7 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5793 ms = 175.7 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5796 ms = 175.6 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5794 ms = 175.7 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5765 ms = 176.6 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5776 ms = 176.2 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5742 ms = 177.3 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5807 ms = 175.3 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5753 ms = 176.9 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5776 ms = 176.3 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5762 ms = 176.7 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5814 ms = 175.1 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5791 ms = 175.8 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5791 ms = 175.8 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5820 ms = 174.9 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5857 ms = 173.8 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5815 ms = 175.1 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5838 ms = 174.4 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5827 ms = 174.7 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5822 ms = 174.9 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5784 ms = 176.0 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5821 ms = 174.9 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5794 ms = 175.7 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5828 ms = 174.7 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5873 ms = 173.3 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5858 ms = 173.8 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5838 ms = 174.4 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5818 ms = 175.0 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5809 ms = 175.2 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5847 ms = 174.1 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5831 ms = 174.6 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5839 ms = 174.3 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5845 ms = 174.2 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5901 ms = 172.5 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5848 ms = 174.1 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5850 ms = 174.0 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5838 ms = 174.4 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5834 ms = 174.5 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5853 ms = 173.9 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5833 ms = 174.5 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5854 ms = 173.9 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5893 ms = 172.7 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5793 ms = 175.7 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5854 ms = 173.9 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5817 ms = 175.0 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5847 ms = 174.1 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5904 ms = 172.4 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5911 ms = 172.2 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5851 ms = 174.0 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5906 ms = 172.4 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 435 group-steps, 1018 rows in 5843 ms = 174.2 rows/s (admissions included) (583 of 806 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5839 ms = 174.3 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5895 ms = 172.7 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5867 ms = 173.5 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 437 group-steps, 1018 rows in 5835 ms = 174.5 rows/s (admissions included) (581 of 808 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=-1 batch=0 solo_pw=2
+strata hybrid: penalty-aware solo pipeline, history=64 repeat=1.0000 freq=0.0000 presence=1.5000
+strata hybrid request: admit=0 batch=0 solo_pw=0
+strata hybrid request: admit=2 batch=1 solo_pw=0
+strata batch (pipelined, 2 groups of 2): 430 group-steps, 1018 rows in 6720 ms = 151.5 rows/s (admissions included) (588 of 812 MTP proposals kept)
+strata hybrid request: admit=-1 batch=0 solo_pw=0

@@ -1,0 +1,150 @@
+[
+  {
+    "experiment": "资源共存（未兼容惩罚）",
+    "case": "control-a",
+    "ok": true,
+    "single_e2e_tps": 70.93819175699926,
+    "single_decode_tps": 75.66046896658473,
+    "dual_e2e_tps": 161.67762995317716,
+    "sustained_s": 95.00386667251587,
+    "transitions": {
+      "passed": true,
+      "cycles": 3
+    },
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "资源共存（未兼容惩罚）",
+    "case": "patch-off",
+    "ok": true,
+    "single_e2e_tps": 72.60842085115605,
+    "single_decode_tps": 76.38770090456552,
+    "dual_e2e_tps": 159.7910910216471,
+    "sustained_s": 96.12550926208496,
+    "transitions": {
+      "passed": true,
+      "cycles": 3
+    },
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "资源共存（未兼容惩罚）",
+    "case": "hybrid",
+    "ok": true,
+    "single_e2e_tps": 73.1146597118337,
+    "single_decode_tps": 77.80517258188942,
+    "dual_e2e_tps": 159.52990772853593,
+    "sustained_s": 96.28288650512695,
+    "transitions": {
+      "passed": true,
+      "cycles": 3
+    },
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "资源共存（未兼容惩罚）",
+    "case": "control-b",
+    "ok": true,
+    "single_e2e_tps": 71.53210684938426,
+    "single_decode_tps": 76.15847207595343,
+    "dual_e2e_tps": 163.2673427515963,
+    "sustained_s": 94.07882642745972,
+    "transitions": {
+      "passed": true,
+      "cycles": 3
+    },
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "惩罚兼容（接口探针被拒绝）",
+    "case": "hybrid",
+    "ok": false,
+    "single_e2e_tps": null,
+    "single_decode_tps": null,
+    "dual_e2e_tps": null,
+    "sustained_s": null,
+    "transitions": null,
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "惩罚兼容（探针长度断言不当）",
+    "case": "hybrid",
+    "ok": false,
+    "single_e2e_tps": null,
+    "single_decode_tps": null,
+    "dual_e2e_tps": null,
+    "sustained_s": null,
+    "transitions": null,
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "惩罚兼容与604秒速度长测",
+    "case": "hybrid",
+    "ok": true,
+    "single_e2e_tps": 120.52609312221735,
+    "single_decode_tps": 131.73618259427874,
+    "dual_e2e_tps": 157.19286279050496,
+    "sustained_s": 91.20006942749023,
+    "transitions": {
+      "passed": true,
+      "cycles": 3
+    },
+    "penalty_probe": {
+      "passed": false,
+      "requests": 4,
+      "serial_repeat_equal": false,
+      "pipeline_repeat_equal": false,
+      "exact_output_match": false,
+      "penalties": {
+        "repetition": 1.1,
+        "frequency": 2,
+        "presence": 1.5,
+        "window": 64
+      },
+      "note": "Natural EOS is valid; max_tokens is an upper bound. Equality is recorded independently from performance."
+    },
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "惩罚兼容与604秒速度长测",
+    "case": "confirm",
+    "ok": false,
+    "single_e2e_tps": 130.00733272257403,
+    "single_decode_tps": 144.960350771052,
+    "dual_e2e_tps": 159.27426958436743,
+    "sustained_s": 604.3411798477173,
+    "transitions": null,
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  },
+  {
+    "experiment": "相同二进制补充功能验收",
+    "case": "hybrid",
+    "ok": true,
+    "single_e2e_tps": 128.58547543707246,
+    "single_decode_tps": 143.89511657640708,
+    "dual_e2e_tps": 159.97731411293512,
+    "sustained_s": 32.00453782081604,
+    "transitions": {
+      "passed": true,
+      "cycles": 3
+    },
+    "penalty_probe": null,
+    "restored": true,
+    "restore_error": null
+  }
+]

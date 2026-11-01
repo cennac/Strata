@@ -1,0 +1,45 @@
+[
+  {
+    "cmd": [
+      "cmake",
+      "-S",
+      "/WORK/source",
+      "-B",
+      "/WORK/build-host",
+      "-DSTRATA_NATIVE_EXPERTS=OFF",
+      "-DSTRATA_BUILD_TESTS=ON",
+      "-DSTRATA_ENABLE_CUDA=OFF",
+      "-DSTRATA_ENABLE_HIP=OFF"
+    ],
+    "returncode": 0,
+    "stdout": "-- The CXX compiler identification is GNU 15.2.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Performing Test STRATA_HAVE_AVXVNNI_INTRINSICS\n-- Performing Test STRATA_HAVE_AVXVNNI_INTRINSICS - Success\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n-- Found Threads: TRUE\n-- Configuring done (0.6s)\n-- Generating done (0.0s)\n-- Build files have been written to: /WORK/build-host\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "cmake",
+      "--build",
+      "/WORK/build-host",
+      "--target",
+      "pipeline_penalties_test",
+      "batch_groups_test",
+      "-j2"
+    ],
+    "returncode": 0,
+    "stdout": "[  0%] Building CXX object CMakeFiles/pipeline_penalties_test.dir/src/program/pipeline_penalties_test.cpp.o\n[100%] Linking CXX executable pipeline_penalties_test\n[100%] Built target pipeline_penalties_test\n[100%] Building CXX object CMakeFiles/batch_groups_test.dir/src/program/batch_groups_test.cpp.o\n[100%] Linking CXX executable batch_groups_test\n[100%] Built target batch_groups_test\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "ctest",
+      "--test-dir",
+      "/WORK/build-host",
+      "-R",
+      "^(pipeline_penalties_test|batch_groups_test)$",
+      "--output-on-failure"
+    ],
+    "returncode": 0,
+    "stdout": "Test project /WORK/build-host\n    Start 41: batch_groups_test\n1/2 Test #41: batch_groups_test ................   Passed    0.00 sec\n    Start 42: pipeline_penalties_test\n2/2 Test #42: pipeline_penalties_test ..........   Passed    0.01 sec\n\n100% tests passed, 0 tests failed out of 2\n\nTotal Test time (real) =   0.01 sec\n",
+    "stderr": ""
+  }
+]

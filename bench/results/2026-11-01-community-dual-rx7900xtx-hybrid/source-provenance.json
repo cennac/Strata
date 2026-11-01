@@ -1,0 +1,10 @@
+{
+  "historical_engine_version_string": "0.1.43",
+  "historical_engine_sha256": "3029ce1dcbcf402be45b24cc4fac5ace2b8a4aa58da8555d073951d45eb85710",
+  "hybrid_base_generate_sha256": "7074e8a87c50b1bfeab0e39fbd747ce39508b59296972c26e2044b53653316d2",
+  "hybrid_final_generate_sha256": "0df8ab25103eb4e415f553354b29e1c9857690444b920b11729c32877e149f20",
+  "base_description": "Custom RDNA3 0.1.43-based tree with DIRECT slot copying and pipelined MTP backported from upstream 99866a47a2b8.",
+  "upstream_mtp_reference": "https://github.com/Niko1221/Strata/commit/99866a47a2b8",
+  "new_pr_base": "c62d5e3a15b40ea51c96aae9e8d36928965f53ab",
+  "limits": "The historical patch requires this custom base, not current main. The focused mainline port uses STRATA_PIPELINE_PENALTIES and does not include coexistence. No mainline runtime speed claim."
+}
