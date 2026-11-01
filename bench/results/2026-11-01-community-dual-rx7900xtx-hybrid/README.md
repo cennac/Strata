@@ -1,6 +1,6 @@
 # Two RX 7900 XTX: solo pipeline and concurrent MTP experiment
 
-Measured on 2026-11-01 by Cennac with an AI coding assistant. These are measurements of a **custom 0.1.43-based RDNA3 engine**, not the current upstream engine or the new mainline PR. This archive accompanies the penalty-history fix; it is not a standard or approved benchmark-protocol submission.
+Measured on 2026-11-01 by Cennac. These are measurements of a **custom 0.1.43-based RDNA3 engine**, not the current upstream engine or the new mainline PR. This archive accompanies the penalty-history fix; it is not a standard or approved benchmark-protocol submission.
 
 ## Environment and workload
 
