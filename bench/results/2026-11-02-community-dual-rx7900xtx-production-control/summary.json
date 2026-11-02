@@ -1,0 +1,30 @@
+{
+  "production_original_workload": {
+    "solo_mean_e2e_tps": 114.58337216701445,
+    "dual_aggregate_e2e_tps": 153.62692674911742,
+    "dual_wall_s": 33.327490878999924,
+    "dual_batches": 5
+  },
+  "production_switch_solo_after_median": 134.11463339269798,
+  "production_switch_dual_median": 164.3520501459444,
+  "experimental_switch_solo_after_median": 93.01496965717409,
+  "experimental_switch_dual_median": 136.1765634650248,
+  "experimental_vs_production_solo_pct": -30.645174725401446,
+  "experimental_vs_production_dual_pct": -17.143374029043024,
+  "original_marker_checks": true,
+  "switch_errors": [],
+  "telemetry": {
+    "min_available_gib": 16.415271759033203,
+    "max_hotspot_c": [
+      77.0,
+      82.0
+    ]
+  },
+  "final_checks": {
+    "config_unchanged": true,
+    "hardware_unchanged": true,
+    "loaded_after": true,
+    "in_flight_after": 0,
+    "issues": []
+  }
+}

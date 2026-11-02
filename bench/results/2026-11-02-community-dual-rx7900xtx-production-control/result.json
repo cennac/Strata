@@ -1,0 +1,22 @@
+{
+  "started": 1793581456.3271422,
+  "production_binary_sha256": "3029ce1dcbcf402be45b24cc4fac5ace2b8a4aa58da8555d073951d45eb85710",
+  "config_sha256": "85cc928fdbe4515013549a692562ddd479d4e3c85a9b501e3cd46069c22eee54",
+  "cases": [
+    {
+      "name": "original-workload",
+      "returncode": 0
+    },
+    {
+      "name": "new-workload",
+      "returncode": 0
+    }
+  ],
+  "service_modified": false,
+  "ended": 1793581606.352179,
+  "issues": [],
+  "config_unchanged": true,
+  "hardware_unchanged": true,
+  "loaded_after": true,
+  "in_flight_after": 0
+}

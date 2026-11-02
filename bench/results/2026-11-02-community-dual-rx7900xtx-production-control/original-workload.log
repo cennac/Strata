@@ -1,0 +1,6 @@
+{
+  "solo_mean_e2e_tps": 114.58337216701445,
+  "dual_aggregate_e2e_tps": 153.62692674911742,
+  "dual_wall_s": 33.327490878999924,
+  "dual_batches": 5
+}
