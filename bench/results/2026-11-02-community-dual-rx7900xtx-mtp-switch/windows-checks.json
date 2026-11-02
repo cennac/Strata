@@ -1,0 +1,41 @@
+{
+  "compiler": "MSVC 19.29, CUDA 12.1 headers",
+  "scope": "Host regressions and generate.cpp translation-unit compilation; not a full CUDA build or GPU runtime",
+  "checks": [
+    {
+      "label": "pipeline_batch-compile",
+      "returncode": 0,
+      "elapsed_s": 5.597351551055908
+    },
+    {
+      "label": "pipeline_batch-test",
+      "returncode": 0,
+      "elapsed_s": 3.677664279937744
+    },
+    {
+      "label": "pipeline_penalties-compile",
+      "returncode": 0,
+      "elapsed_s": 3.8370866775512695
+    },
+    {
+      "label": "pipeline_penalties-test",
+      "returncode": 0,
+      "elapsed_s": 3.5278308391571045
+    },
+    {
+      "label": "batch_groups-compile",
+      "returncode": 0,
+      "elapsed_s": 3.6223926544189453
+    },
+    {
+      "label": "batch_groups-test",
+      "returncode": 0,
+      "elapsed_s": 4.1246018409729
+    },
+    {
+      "label": "cuda-generate-translation-unit",
+      "returncode": 0,
+      "elapsed_s": 11.952905654907227
+    }
+  ]
+}

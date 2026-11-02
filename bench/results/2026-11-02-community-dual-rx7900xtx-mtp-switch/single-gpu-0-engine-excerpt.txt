@@ -1,0 +1,8 @@
+strata mtp: --mtp-q4: 10 projections as Q4_0 (37.3 MiB)
+strata mtp: draft layer loaded, 832 MiB of VRAM (experts 675, dense 111), files read in 1.60 s (490 MiB/s)
+strata generate: expert cache auto: 18.43 GiB free, 1536 MiB reserved (+183 MiB for the draft head, +256 MiB for what is allocated after the cache) -> 7604 slots
+strata mtp: draft head over 106299 tokens (178.4 MiB)
+strata mtp: --mtp-q4: draft head over 106299 tokens as Q4_0 (146.0 MiB read per step, was 178.4)
+strata serve: decode expert cache hit rate: 90.0% (265792 hits / 295200 lookups)
+strata serve: decode expert cache hit rate: 92.4% (266555 hits / 288480 lookups)
+strata serve: decode expert cache hit rate: 92.3% (259141 hits / 280800 lookups)

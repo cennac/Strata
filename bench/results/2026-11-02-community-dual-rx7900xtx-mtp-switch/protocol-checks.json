@@ -1,0 +1,6 @@
+{
+  "command": "python -X utf8 tools/test_bench_mtp_switch.py",
+  "tests": 3,
+  "passed": true,
+  "scope": "Local HTTP/SSE fixtures; no GPU or engine measurements"
+}

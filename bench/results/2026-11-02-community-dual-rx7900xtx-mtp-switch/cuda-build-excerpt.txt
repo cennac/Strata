@@ -1,0 +1,12 @@
+ 7128 |         const auto& lay = strata::kernels::cpu::expert_layout();
+      |                     ^~~
+<workdir>/source/src/program/generate.cpp: In lambda function:
+<workdir>/source/src/program/generate.cpp:7185:29: warning: unused variable ‘lay’ [-Wunused-variable]
+ 7185 |                 const auto& lay = strata::kernels::cpu::expert_layout();
+      |                             ^~~
+<workdir>/source/src/program/generate.cpp: In lambda function:
+<workdir>/source/src/program/generate.cpp:13500:30: warning: unused variable ‘w’ [-Wunused-variable]
+13500 |                 const double w = (double) bt_windows, wall = std::chrono::duration<double, std::milli>(Clock::now() - bt_start).count();
+      |                              ^
+[100%] Linking CXX executable strata
+[100%] Built target strata

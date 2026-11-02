@@ -1,0 +1,30 @@
+strata generate: STRATA_PIPED_MTP: 2 pipelined groups of 2 slots draft up to 2 MTP proposals per slot each window
+strata mtp: --mtp-q4: 10 projections as Q4_0 (37.3 MiB)
+strata mtp: draft layer loaded, 832 MiB of VRAM (experts 675, dense 111), files read in 0.41 s (1933 MiB/s)
+strata mtp: shared draft weights, 9 MiB of private state and buffers
+strata mtp: shared draft weights, 9 MiB of private state and buffers
+strata mtp: shared draft weights, 9 MiB of private state and buffers
+strata mtp: shared draft weights, 9 MiB of private state and buffers
+strata generate: --batch-mtp: 4 slot drafters on CUDA1 (9 MiB of private K/V state and buffers each, sharing the solo drafter's weights); 19.00 GiB free there
+strata generate: expert cache auto: 19.94 GiB free, 1536 MiB reserved (+0 MiB for the draft head, +256 MiB for what is allocated after the cache) -> 8381 slots
+strata mtp: draft head over 106299 tokens (178.4 MiB)
+strata mtp: --mtp-q4: draft head over 106299 tokens as Q4_0 (146.0 MiB read per step, was 178.4)
+strata serve: decode expert cache hit rate: 99.4% (293531 hits / 295200 lookups)
+strata serve: decode expert cache hit rate: 99.8% (299746 hits / 300480 lookups)
+strata serve: decode expert cache hit rate: 99.8% (296591 hits / 297120 lookups)
+strata serve: decode expert cache hit rate: 99.8% (479 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 99.8% (479 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 99.8% (479 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 99.9% (1919 hits / 1920 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (480 hits / 480 lookups)
+strata serve: decode expert cache hit rate: 100.0% (219749 hits / 219840 lookups)
+strata serve: decode expert cache hit rate: 100.0% (297481 hits / 297600 lookups)
+strata serve: decode expert cache hit rate: 100.0% (297015 hits / 297120 lookups)
+strata serve: decode expert cache hit rate: 100.0% (297015 hits / 297120 lookups)

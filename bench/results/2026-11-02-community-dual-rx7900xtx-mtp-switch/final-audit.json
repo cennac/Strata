@@ -1,0 +1,16 @@
+{
+  "loaded": true,
+  "concurrency": {
+    "serving": 2,
+    "engine_slots": 4,
+    "requested": 4
+  },
+  "activity": {
+    "requests": 0,
+    "in_flight": 0,
+    "last_request_at": null
+  },
+  "production_config_unchanged": true,
+  "hardware_unchanged": true,
+  "candidate_engine_pids": []
+}

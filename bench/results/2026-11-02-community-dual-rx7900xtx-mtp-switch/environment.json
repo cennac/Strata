@@ -1,0 +1,31 @@
+{
+  "compiler": "c++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+  "gpu": [
+    {
+      "pci": "0000:06:00.0",
+      "power_cap_w": 231.0,
+      "fan_mode": "2\n",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16",
+      "subsystem_vendor": "0x1da2",
+      "subsystem_device": "0xe487"
+    },
+    {
+      "pci": "0000:03:00.0",
+      "power_cap_w": 303.0,
+      "fan_mode": "2\n",
+      "current_link_speed": "16.0 GT/s PCIe",
+      "current_link_width": "16",
+      "max_link_speed": "16.0 GT/s PCIe",
+      "max_link_width": "16",
+      "subsystem_vendor": "0x1da2",
+      "subsystem_device": "0x471e"
+    }
+  ],
+  "physical_ram_kib": 64501876,
+  "fixture": "https://github.com/cennac/Strata/blob/3eb5752b18c30e633e144511d919b95bd64e1959/community/fixtures/ctx131072-route0.json.gz",
+  "scope": "One public synthetic near-128K prompt; greedy requests; HTTP end-to-end rates; not an engine quality suite",
+  "link_state_sampling": "After restoration; current_link_speed is not a load-state link measurement"
+}

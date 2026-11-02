@@ -1,0 +1,159 @@
+{
+  "dual-optin": {
+    "phases": {
+      "solo-before": {
+        "samples": 2,
+        "rates": [
+          90.34915031745163,
+          88.84962579191877
+        ],
+        "median": 89.59938805468519,
+        "mean": 89.59938805468519
+      },
+      "simultaneous": {
+        "samples": 3,
+        "rates": [
+          134.00066751019233,
+          136.1765634650248,
+          136.30227816393003
+        ],
+        "median": 136.1765634650248,
+        "mean": 135.49316971304904
+      },
+      "staggered": {
+        "samples": 1,
+        "rates": [
+          85.8869082506436
+        ],
+        "median": 85.8869082506436,
+        "mean": 85.8869082506436
+      },
+      "solo-after": {
+        "samples": 3,
+        "rates": [
+          91.0382246057423,
+          93.01496965717409,
+          93.53534613150215
+        ],
+        "median": 93.01496965717409,
+        "mean": 92.52951346480619
+      }
+    },
+    "requests": 14,
+    "errors": [],
+    "prompt_tokens": [
+      130020
+    ],
+    "observed_1_2_1": [
+      true
+    ]
+  },
+  "dual-optout": {
+    "phases": {
+      "solo-before": {
+        "samples": 2,
+        "rates": [
+          49.961149151672636,
+          53.41119162296644
+        ],
+        "median": 51.686170387319535,
+        "mean": 51.686170387319535
+      },
+      "simultaneous": {
+        "samples": 3,
+        "rates": [
+          134.04888872750593,
+          133.1002573652699,
+          134.14716795714125
+        ],
+        "median": 134.04888872750593,
+        "mean": 133.76543801663902
+      },
+      "staggered": {
+        "samples": 1,
+        "rates": [
+          63.642833750357745
+        ],
+        "median": 63.642833750357745,
+        "mean": 63.642833750357745
+      },
+      "solo-after": {
+        "samples": 3,
+        "rates": [
+          56.33562668315824,
+          56.67200498099819,
+          56.2980369315773
+        ],
+        "median": 56.33562668315824,
+        "mean": 56.435222865244576
+      }
+    },
+    "requests": 14,
+    "errors": [],
+    "prompt_tokens": [
+      130020
+    ],
+    "observed_1_2_1": [
+      true
+    ]
+  },
+  "single-gpu-0": {
+    "phases": {
+      "solo-before": {
+        "samples": 2,
+        "rates": [
+          67.18878300065086,
+          71.89801572036647
+        ],
+        "median": 69.54339936050866,
+        "mean": 69.54339936050866
+      }
+    },
+    "requests": 3,
+    "errors": [],
+    "prompt_tokens": [
+      130020
+    ],
+    "observed_1_2_1": []
+  },
+  "single-gpu-1": {
+    "phases": {
+      "solo-before": {
+        "samples": 2,
+        "rates": [
+          58.27081035664844,
+          61.87983368224949
+        ],
+        "median": 60.07532201944896,
+        "mean": 60.07532201944896
+      }
+    },
+    "requests": 3,
+    "errors": [],
+    "prompt_tokens": [
+      130020
+    ],
+    "observed_1_2_1": []
+  },
+  "text_hash_comparison": {
+    "matched": 3,
+    "compared": 14,
+    "per_request": {
+      "pair-0-0": false,
+      "pair-0-1": false,
+      "pair-1-0": false,
+      "pair-1-1": false,
+      "pair-2-0": false,
+      "pair-2-1": false,
+      "solo-after-0": true,
+      "solo-after-1": true,
+      "solo-after-2": true,
+      "solo-before-0": false,
+      "solo-before-1": false,
+      "solo-before-2": false,
+      "transition-long": false,
+      "transition-short": false
+    },
+    "scope": "Greedy rendered content/reasoning for one repeated public prompt only; not token/logit parity"
+  }
+}

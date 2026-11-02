@@ -1,0 +1,1 @@
+pipeline_batch_test: PASS (startup gates; GEN/admit/batch/GEN; opt-out)

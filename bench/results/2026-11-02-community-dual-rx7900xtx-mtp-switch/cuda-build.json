@@ -1,0 +1,46 @@
+{
+  "started": 1793580566.8802419,
+  "backend": "CUDA",
+  "runtime_tested": false,
+  "full_build": true,
+  "checks": [
+    {
+      "label": "cuda-configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<workdir>/source",
+        "-B",
+        "<workdir>/build-cuda-retry1",
+        "-G",
+        "Unix Makefiles",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DSTRATA_ENABLE_CUDA=ON",
+        "-DSTRATA_ENABLE_HIP=OFF",
+        "-DSTRATA_BUILD_TESTS=OFF",
+        "-DSTRATA_PREFILL_MMQ=OFF",
+        "-DSTRATA_MMQ_KQUANTS=OFF",
+        "-DSTRATA_GGML_DIR=<deps>/llama.cpp",
+        "-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc",
+        "-DCMAKE_CUDA_ARCHITECTURES=75",
+        "-DCMAKE_CUDA_FLAGS=--allow-unsupported-compiler"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "cuda-build",
+      "command": [
+        "cmake",
+        "--build",
+        "<workdir>/build-cuda-retry1",
+        "--target",
+        "strata",
+        "-j",
+        "4"
+      ],
+      "returncode": 0
+    }
+  ],
+  "binary_sha256": "7ee2eeb28f399403e06ee16e945a51709648c4d0a2ecd4d7f783be83965574e8",
+  "ended": 1793580829.2990155
+}

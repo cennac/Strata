@@ -1,0 +1,44 @@
+[
+  {
+    "started": 1793580347.9766855,
+    "backend": "CUDA",
+    "runtime_tested": false,
+    "full_build": false,
+    "checks": [
+      {
+        "label": "cuda-configure",
+        "command": [
+          "cmake",
+          "-S",
+          "<workdir>/source",
+          "-B",
+          "<workdir>/build-cuda",
+          "-G",
+          "Unix Makefiles",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DSTRATA_ENABLE_CUDA=ON",
+          "-DSTRATA_ENABLE_HIP=OFF",
+          "-DSTRATA_BUILD_TESTS=OFF",
+          "-DSTRATA_PREFILL_MMQ=ON",
+          "-DSTRATA_MMQ_KQUANTS=ON",
+          "-DSTRATA_GGML_DIR=<deps>/llama.cpp",
+          "-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc",
+          "-DCMAKE_CUDA_ARCHITECTURES=75",
+          "-DCMAKE_CUDA_FLAGS=--allow-unsupported-compiler"
+        ],
+        "returncode": 1
+      }
+    ],
+    "error": "Traceback (most recent call last):\n  File \"<workdir>/build_cuda.py\", line 33, in <module>\n    run('cuda-configure', ['cmake', '-S', str(SRC), '-B', str(BUILD), '-G', 'Unix Makefiles',\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        '-DCMAKE_BUILD_TYPE=Release', '-DSTRATA_ENABLE_CUDA=ON', '-DSTRATA_ENABLE_HIP=OFF',\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<2 lines>...\n        '-DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc', '-DCMAKE_CUDA_ARCHITECTURES=75',\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        '-DCMAKE_CUDA_FLAGS=--allow-unsupported-compiler'], env)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<workdir>/build_cuda.py\", line 25, in run\n    raise RuntimeError(label+' failed')\nRuntimeError: cuda-configure failed\n",
+    "ended": 1793580348.1680784
+  },
+  {
+    "started": 1793580474.0988777,
+    "backend": "CUDA",
+    "runtime_tested": false,
+    "full_build": false,
+    "checks": [],
+    "error": "Traceback (most recent call last):\n  File \"<workdir>/build_cuda_retry1.py\", line 28, in <module>\n    result = json.loads((ROOT/'validation/result.json').read_text())\n                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/usr/lib/python3.14/pathlib/__init__.py\", line 788, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/pathlib/__init__.py\", line 772, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: '<workdir>/validation/result.json'\n",
+    "ended": 1793580474.0997896
+  }
+]

@@ -1,0 +1,61 @@
+batch_groups_test
+  auto: no layer split, one group                                                ok
+  auto: two GPUs, 2 groups when the slots divide by 2                            ok
+  auto: at most one group per GPU, and a divisor of the slots                    ok
+  layer split, --batch 2, nothing given: 2 groups                                ok
+  --batch 1: no default                                                          ok
+  no layer split: one group                                                      ok
+  --batch-mtp, nothing given: the pipeline wins, --batch-mtp is dropped          ok
+  STRATA_BATCH_MTP_SERIAL: one group, because of --batch-mtp                     ok
+  the reason names the feature                                                   ok
+  STRATA_PIPED_MTP, 4 slots on 4 GPUs: 4 groups of 1 slot, and the drafts stay   ok
+  STRATA_PIPED_MTP, 8 slots on 4 GPUs: 4 groups of 2 slots, and the drafts stay  ok
+  STRATA_PIPED_MTP with STRATA_BATCH_MTP_SERIAL: one serial group                ok
+  STRATA_PIPED_MTP without --batch-mtp: nothing to draft                         ok
+  STRATA_PIPED_MTP, --batch-groups 1: the serial path, --batch-mtp runs there    ok
+  STRATA_PIPED_MTP, --batch-groups auto given: 4 groups of 1 slot, and the drafts stay ok
+  STRATA_PIPED_MTP, --batch-groups 4 given: 4 groups of 1 slot, and the drafts stay ok
+  STRATA_PIPED_MTP, --batch-groups 2 given: 2 groups of 2 slots, and the drafts stay ok
+  NV_SERIAL unset: the pipeline                                                  ok
+  NV_SERIAL empty: the pipeline                                                  ok
+  NV_SERIAL=0: the pipeline                                                      ok
+  NV_SERIAL=1: serial                                                            ok
+  NV_SERIAL=yes: serial                                                          ok
+  STRATA_DEFAULTS=026: serial (v0.2.6's behaviour)                               ok
+  an explicit NV_SERIAL=0 wins over STRATA_DEFAULTS=026                          ok
+  NV_SERIAL empty and STRATA_DEFAULTS=026: serial                                ok
+  2 cards, 4 slots, nothing given: 2 pipelined groups, whatever the residency    ok
+  unset, --batch-mtp, nothing given: the pipeline wins, the drafts are dropped (as before) ok
+  unset, --batch-mtp, --batch-groups 2: not 'dropped' here (as before)           ok
+  unset, --batch-mtp, --batch-groups 1: serial windows keep the drafts           ok
+  unset, STRATA_BATCH_MTP_SERIAL: one serial group (as before)                   ok
+  --adapt-async 1, nothing given: one group                                      ok
+  both: --adapt-async 1 still gives one group                                    ok
+  both with STRATA_BATCH_MTP_SERIAL: --batch-mtp is named                        ok
+  auto would be 1 group anyway: no reason                                        ok
+  nv_serial_faster, 2 cards, 4 slots, nothing given: one group, named            ok
+  the reason names the measurement                                               ok
+  flag off: the pipeline default stays                                           ok
+  8 slots (measured +15%): serial too                                            ok
+  4 cards (not measured): the pipeline stays                                     ok
+  with --batch-mtp the 0.1.43.1 rule is unchanged                                ok
+  --batch-groups auto given: the pipeline                                        ok
+  --batch-groups 2 given: 2                                                      ok
+  --batch-groups 2 with --batch-mtp: 2                                           ok
+  --batch-groups 1: 1 (the opt-out)                                              ok
+  --batch-groups 4 is returned as given                                          ok
+  --batch-groups auto with --batch-mtp: auto asked for the pipeline, 2 groups    ok
+  an explicit number without a split is returned (the engine warns)              ok
+  pipe adapt: unset, empty or 0 is off                                           ok
+  pipe adapt: negative or not a number is off                                    ok
+  pipe adapt: a positive number is the interval                                  ok
+  pipe adapt: not before N group windows                                         ok
+  pipe adapt: due after N group windows                                          ok
+  pipe adapt: counted again from the last round                                  ok
+  pipe adapt: due N windows after the last round                                 ok
+  pipe adapt: never when off                                                     ok
+  pipe adapt: never with the adaptive tier off                                   ok
+  pipe adapt: never beside --adapt-async 1                                       ok
+  pipe adapt: never while a prompt is read beside the slots                      ok
+  pipe adapt: never while the last round's copies are in flight                  ok
+batch_groups_test: all passed

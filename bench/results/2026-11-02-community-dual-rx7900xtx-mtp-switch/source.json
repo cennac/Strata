@@ -1,0 +1,23 @@
+{
+  "src/program/generate.cpp": {
+    "raw_sha256": "5599d82b93a3e64c6566eafa2522c21978b872ae930a2d59430907e440675fdd",
+    "lf_sha256": "dbcbf0a8b1ebae6c4af49f3b801907aeddd9efb28b1d7d13bb8bfd9ae53a925a",
+    "git_blob": "fb5c1e27700221752e75edcbe3e89089aae9a1da"
+  },
+  "include/strata/program/pipeline_batch.hpp": {
+    "raw_sha256": "0a66e7b753616a799d2c52e31f1c85406623b80c31a4a5174c1fb0b1bca53d05",
+    "lf_sha256": "0a66e7b753616a799d2c52e31f1c85406623b80c31a4a5174c1fb0b1bca53d05",
+    "git_blob": "d0db0c811a1136f618c610bd725d2188e0b0f1ab"
+  },
+  "src/program/pipeline_batch_test.cpp": {
+    "raw_sha256": "6dd5740a056a3ecac8eb2798e9f9c1101c57ac95cb2aee1cb652ad8e0a293e07",
+    "lf_sha256": "6dd5740a056a3ecac8eb2798e9f9c1101c57ac95cb2aee1cb652ad8e0a293e07",
+    "git_blob": "71ca674cedff7f8a07bb9e2b85af9a423fd1d6f0"
+  },
+  "tools/bench_mtp_switch.py": {
+    "raw_sha256": "0e37d72d7b9be173ac7bf91a2f4f4515c3fb60a0c45551b0270d67c904f104ca",
+    "lf_sha256": "0e37d72d7b9be173ac7bf91a2f4f4515c3fb60a0c45551b0270d67c904f104ca",
+    "git_blob": "5cabcfa0ca02850e529e1bff29331ee65cdcab0e"
+  },
+  "commit": "4398ff2e8ee44768104587585a5ce6a7e77e99d3"
+}

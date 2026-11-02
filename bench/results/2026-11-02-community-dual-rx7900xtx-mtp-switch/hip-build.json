@@ -1,0 +1,115 @@
+{
+  "started": 1793579151.6436627,
+  "source": "current main plus pending penalty patch and opt-in switching",
+  "full_hip_build": true,
+  "production_modified": false,
+  "checks": [
+    {
+      "label": "pipeline_batch-compile",
+      "command": [
+        "c++",
+        "-std=c++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "src/program/pipeline_batch_test.cpp",
+        "-o",
+        "<workdir>/build/pipeline_batch_test"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "pipeline_batch-test",
+      "command": [
+        "<workdir>/build/pipeline_batch_test"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "pipeline_penalties-compile",
+      "command": [
+        "c++",
+        "-std=c++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "src/program/pipeline_penalties_test.cpp",
+        "-o",
+        "<workdir>/build/pipeline_penalties_test"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "pipeline_penalties-test",
+      "command": [
+        "<workdir>/build/pipeline_penalties_test"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "batch_groups-compile",
+      "command": [
+        "c++",
+        "-std=c++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Iinclude",
+        "src/program/batch_groups_test.cpp",
+        "-o",
+        "<workdir>/build/batch_groups_test"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "batch_groups-test",
+      "command": [
+        "<workdir>/build/batch_groups_test"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "hip-configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<workdir>/source",
+        "-B",
+        "<workdir>/build",
+        "-G",
+        "Unix Makefiles",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DSTRATA_ENABLE_HIP=ON",
+        "-DSTRATA_ENABLE_CUDA=OFF",
+        "-DSTRATA_BUILD_TESTS=OFF",
+        "-DSTRATA_PREFILL_MMQ=ON",
+        "-DSTRATA_MMQ_KQUANTS=ON",
+        "-DSTRATA_GGML_DIR=<deps>/llama.cpp",
+        "-DCMAKE_HIP_ARCHITECTURES=gfx1100",
+        "-DCMAKE_HIP_COMPILER=<rocm>/llvm/bin/clang++",
+        "-DCMAKE_HIP_COMPILER_ROCM_ROOT=<rocm>",
+        "-DCMAKE_HIP_FLAGS=--rocm-path=<rocm> --rocm-device-lib-path=<rocm>/lib/llvm/amdgcn/bitcode",
+        "-DSTRATA_ROCWMMA_INCLUDE_DIR=<deps>/rocWMMA/library/include"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "hip-build",
+      "command": [
+        "cmake",
+        "--build",
+        "<workdir>/build",
+        "--target",
+        "strata",
+        "-j",
+        "4"
+      ],
+      "returncode": 0
+    }
+  ],
+  "generate_sha256": "5599d82b93a3e64c6566eafa2522c21978b872ae930a2d59430907e440675fdd",
+  "binary_sha256": "7d8597c4b23d0f5f481d14681fa2b9fa75a16d571a9ea05d473f8b55240c8aef",
+  "ended": 1793579340.0148876
+}
